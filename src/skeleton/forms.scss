@@ -75,6 +75,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
     border-color: $blue;
+    outline: 0;
 }
 label,
 legend {
