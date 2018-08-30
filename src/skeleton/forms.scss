@@ -12,10 +12,12 @@ select {
     height: 38px;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     background-color: transparent;
-    border-color: $clear-grey ;    
+    border-color: $clear-grey ;   
+    border-bottom-style: solid; //For safari rendering
     box-sizing: border-box; 
     border-width: 0 0 2px;
     transition: border-color 0.7s;
+    border-radius: 0px; //For macos rendering.
 }   
 /* Invalid */
 input[type="email"]:invalid,
@@ -47,7 +49,7 @@ select:disabled {
     border-color: $dark-white ;    
     box-sizing: border-box; 
     border-width: 0 0 2px;
-    transition: border-color 0.7s;
+    transition: border-color 0.7s;    
 }   
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
