@@ -48,6 +48,10 @@ input[type="button"].outline {
   color: $white;
   border-color: $clear-grey;
   background-color: $clear-grey;
+  -webkit-transition: background-color .7s ease-out, color .7s ease-out;
+  -moz-transition: background-color .7s ease-out, color .7s ease-out;
+  -o-transition: background-color .7s ease-out, color .7s ease-out;
+  transition: background-color .7s ease-out, color .7s ease-out;
 }
 .button:hover.outline,
 button:hover.outline,
