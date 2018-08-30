@@ -1604,6 +1604,34 @@ div.content {
     background-color: $dark-white;
     padding: 5%;
 }
+.badge {
+    border-radius: 50%;
+    border: 1px solid;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;    
+}
+
+.badge.danger {   
+    border-color: $red;
+}
+
+.badge.success {        
+    border-color: $green;            
+}
+
+.badge.warning {    
+    border-color: $yellow;           
+}
+
+.badge.primary {    
+    border-color: $blue;        
+}
+
+.badge.dark {
+    border-color: $clear-grey;           
+}
 .danger {   
     background-color: $clear-red;
     color: $red;    

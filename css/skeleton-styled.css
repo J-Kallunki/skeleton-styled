@@ -1540,6 +1540,29 @@ div.content {
   background-color: #D1D1D1;
   padding: 5%; }
 
+.badge {
+  border-radius: 50%;
+  border: 1px solid;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center; }
+
+.badge.danger {
+  border-color: #c94c4c; }
+
+.badge.success {
+  border-color: #16a516; }
+
+.badge.warning {
+  border-color: #a1a103; }
+
+.badge.primary {
+  border-color: #33C3F0; }
+
+.badge.dark {
+  border-color: #999; }
+
 .danger {
   background-color: #ffdddd;
   color: #c94c4c;
