@@ -10,7 +10,7 @@
     text-decoration: none;
     font-size: 17px;
     transition: background-color 0.7s ease, color .7s ease;
-    border-radius: 4px;
+    border-radius: $border-radius;
 }
 
 .navbar .right {
@@ -106,7 +106,7 @@ div.content {
     margin-bottom: 0;
     margin-left: 5px;
     background-color: $white;
-    border-radius: 4px;
+    border-radius: $border-radius;
 }
 
 /* When the input field gets focus, change its width to 100% */

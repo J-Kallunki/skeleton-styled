@@ -14,6 +14,7 @@ const settings = {
 
         // // Skeleton:
         'src/skeleton/colors.scss',
+        'src/skeleton/sizes.scss',
         'src/skeleton/base-styles.scss',
         'src/skeleton/typography.scss',
         'src/skeleton/buttons.scss',
