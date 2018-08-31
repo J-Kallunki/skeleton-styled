@@ -26,7 +26,7 @@
     width: 25px;
     background-color: $clear-grey;
     border-radius: 50%;
-    transition: background-color 0.7s ease;
+    transition: background-color $transition-time ease;
 }
 /* Clearer color when the mark is disabled */
 .checkcontainer input:disabled ~ .mark {

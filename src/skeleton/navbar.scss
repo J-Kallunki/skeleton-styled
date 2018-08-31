@@ -9,7 +9,7 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    transition: background-color 0.7s ease, color .7s ease;
+    transition: background-color $transition-time ease, color $transition-time ease;
     border-radius: $border-radius;
 }
 
@@ -99,8 +99,6 @@ div.content {
 
 .navbar input[type=text] {
     width: 130px;
-    // -webkit-transition: width 0.7s ease-in-out;
-    // transition: width 0.7s ease-in-out;
     border-width: 0px;
     margin-top: 6px;
     margin-bottom: 0;

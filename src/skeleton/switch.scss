@@ -17,8 +17,8 @@
     right: 0;
     bottom: 0;
     background-color: $red;
-    -webkit-transition: .7s;
-    transition: .7s;
+    -webkit-transition: $transition-time;
+    transition: $transition-time;
 }
 
 input:disabled + .slider {
@@ -34,8 +34,8 @@ input:disabled + .slider {
     left: 4px;
     bottom: 4px;
     background-color: $white;
-    -webkit-transition: .7s;
-    transition: .7s;
+    -webkit-transition: $transition-time;
+    transition: $transition-time;
 }
   
 input:checked + .slider {
