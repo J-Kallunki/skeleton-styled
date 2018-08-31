@@ -9,7 +9,7 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-    height: 38px;
+    height: $form-element-height;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     background-color: transparent;
     border-color: $clear-grey ;   
@@ -43,7 +43,7 @@ input[type="url"]:disabled,
 input[type="password"]:disabled,
 textarea:disabled,
 select:disabled {
-    height: 38px;
+    height: $form-element-height;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     background-color: transparent;
     border-color: $dark-white ;    
