@@ -428,7 +428,7 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #555;
   text-align: center;
   font-size: 11px;
@@ -439,8 +439,8 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  -webkit-transition: background-color .7s ease-out, border-color .7s ease-out;
-  transition: background-color .7s ease-out, border-color .7s ease-out;
+  -webkit-transition: background-color 0.7s ease-out, border-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out, border-color 0.7s ease-out;
   border-radius: 4px;
   border: 1px solid #999;
   cursor: pointer;
@@ -470,8 +470,8 @@ input[type="button"].outline {
   color: #fff;
   border-color: #999;
   background-color: #999;
-  -webkit-transition: background-color .7s ease-out, color .7s ease-out;
-  transition: background-color .7s ease-out, color .7s ease-out; }
+  -webkit-transition: background-color 0.7s ease-out, color 0.7s ease-out;
+  transition: background-color 0.7s ease-out, color 0.7s ease-out; }
 
 .button:hover.outline,
 button:hover.outline,
@@ -866,7 +866,7 @@ select {
   border-bottom-style: solid;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-width: 0 0 2px;
+  border-width: 0 0 1px;
   -webkit-transition: border-color 0.7s;
   transition: border-color 0.7s;
   border-radius: 0px; }
@@ -903,7 +903,7 @@ select:disabled {
   border-color: #D1D1D1;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-width: 0 0 2px;
+  border-width: 0 0 1px;
   -webkit-transition: border-color 0.7s;
   transition: border-color 0.7s; }
 
@@ -965,7 +965,7 @@ select {
   -moz-appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, #999 50%), linear-gradient(135deg, #999 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat; }
 
 select:focus {
@@ -976,7 +976,7 @@ select:focus {
   border-color: #33C3F0;
   background-image: linear-gradient(45deg, #33C3F0 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #33C3F0 50%);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
   outline: 0; }
 
@@ -1010,8 +1010,8 @@ td:last-child {
   padding-right: 0; }
 
 tr {
-  -webkit-transition: background-color .7s ease-out;
-  transition: background-color .7s ease-out; }
+  -webkit-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out; }
 
 table.hover tbody tr:hover {
   background-color: #999; }
@@ -1095,8 +1095,8 @@ hr {
 
 .alert {
   padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 5px;
+  margin: 10px 0;
+  border-radius: 4px;
   border-width: 1px;
   border-style: solid;
   color: #555;
@@ -1104,7 +1104,6 @@ hr {
 
 /* The close button */
 .closebtn {
-  margin-left: 15px;
   font-weight: bold;
   float: right;
   font-size: 22px;
@@ -1114,9 +1113,9 @@ hr {
 .note {
   border-radius: 4px;
   border-left: 6px solid;
-  padding-left: 1%;
+  padding: 20px;
   color: #555;
-  margin-bottom: 15px; }
+  margin: 10px 0; }
 
 .note.danger {
   border-left-color: #c94c4c; }
@@ -1138,13 +1137,11 @@ hr {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
-  font-size: 22px;
+  padding-top: 7px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  font-weight: 100; }
+  user-select: none; }
 
 /* Hide the browser's default checkbox */
 .checkcontainer input {
@@ -1160,8 +1157,8 @@ hr {
   width: 25px;
   background-color: #999;
   border-radius: 50%;
-  -webkit-transition: background-color 0.7s ease;
-  transition: background-color 0.7s ease; }
+  -webkit-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out; }
 
 /* Clearer color when the mark is disabled */
 .checkcontainer input:disabled ~ .mark {
@@ -1242,8 +1239,8 @@ hr {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px; }
+  width: 50px;
+  height: 25px; }
 
 /* Hide default HTML checkbox */
 .switch input {
@@ -1258,8 +1255,8 @@ hr {
   right: 0;
   bottom: 0;
   background-color: #c94c4c;
-  -webkit-transition: .7s;
-  transition: .7s; }
+  -webkit-transition: 0.7s;
+  transition: 0.7s; }
 
 input:disabled + .slider {
   background-color: #d6b2b2;
@@ -1268,13 +1265,13 @@ input:disabled + .slider {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 18px;
+  width: 18px;
   left: 4px;
   bottom: 4px;
   background-color: #fff;
-  -webkit-transition: .7s;
-  transition: .7s; }
+  -webkit-transition: 0.7s;
+  transition: 0.7s; }
 
 input:checked + .slider {
   background-color: #33C3F0; }
@@ -1287,8 +1284,8 @@ input:focus + .slider {
   box-shadow: 0 0 1px #33C3F0; }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px); }
+  -webkit-transform: translateX(24px);
+  transform: translateX(24px); }
 
 /* Rounded sliders */
 .slider.round {
@@ -1300,11 +1297,12 @@ input:checked + .slider:before {
 .progressBar {
   width: 100%;
   background-color: #D1D1D1;
-  margin-top: 7px;
-  margin-bottom: 7px; }
+  margin: 10px 0;
+  border-radius: 4px; }
 
 .progress {
-  height: 5px; }
+  height: 5px;
+  border-radius: 4px; }
 
 .progress.primary {
   background-color: #33C3F0; }
@@ -1327,8 +1325,8 @@ input:checked + .slider:before {
   float: left;
   padding: 8px 16px;
   text-decoration: none;
-  -webkit-transition: background-color .7s;
-  transition: background-color .7s;
+  -webkit-transition: background-color 0.7s ease-out;
+  transition: background-color 0.7s ease-out;
   border-radius: 50%; }
 
 /* Style the active/current link */
@@ -1356,7 +1354,7 @@ input:checked + .slider:before {
   color: #fff;
   text-align: center;
   padding: 5px 0;
-  border-radius: 6px;
+  border-radius: 4px;
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
@@ -1365,8 +1363,8 @@ input:checked + .slider:before {
   margin-left: -60px;
   /* Fade in tooltip */
   opacity: 0;
-  -webkit-transition: opacity 0.7s ease;
-  transition: opacity 0.7s ease; }
+  -webkit-transition: opacity 0.7s ease-out;
+  transition: opacity 0.7s ease-out; }
 
 /* Tooltip arrow */
 .tooltip .tooltiptext::after {
@@ -1417,17 +1415,16 @@ input:checked + .slider:before {
 .navbar a {
   display: block;
   color: #777;
-  padding: 14px 16px;
+  padding: 20px;
   text-decoration: none;
   font-size: 17px;
-  -webkit-transition: background-color 0.7s ease, color .7s ease;
-  transition: background-color 0.7s ease, color .7s ease;
+  -webkit-transition: background-color 0.7s ease-out, color 0.7s ease-out;
+  transition: background-color 0.7s ease-out, color 0.7s ease-out;
   border-radius: 4px; }
 
 .navbar .right {
   float: right;
-  margin-right: 7px;
-  margin-top: 7px; }
+  margin: 15px; }
 
 /* Add an active class to highlight the current page */
 .navbar a.active {
@@ -1455,7 +1452,7 @@ input:checked + .slider:before {
   width: 150px;
   height: 100%;
   overflow: auto;
-  margin-top: 55px; }
+  margin-top: 68px; }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
@@ -1500,9 +1497,7 @@ div.content {
 .navbar input[type=text] {
   width: 130px;
   border-width: 0px;
-  margin-top: 6px;
-  margin-bottom: 0;
-  margin-left: 5px;
+  margin: 14px;
   background-color: #fff;
   border-radius: 4px; }
 
@@ -1527,9 +1522,8 @@ div.content {
 .card {
   border-radius: 4px;
   border: 1px solid;
-  padding: 7px;
-  margin-top: 7px;
-  margin-bottom: 7px; }
+  padding: 20px;
+  margin: 10px 0; }
 
 .card .body {
   text-align: right;
@@ -1540,7 +1534,7 @@ div.content {
   border-color: #D1D1D1;
   border-radius: 4px;
   background-color: #D1D1D1;
-  padding: 5%; }
+  padding: 20px; }
 
 .badge {
   border-radius: 50%;

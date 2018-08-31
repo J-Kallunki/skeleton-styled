@@ -373,6 +373,15 @@ $clear-grey: #999;
 // White colors
 $dark-white: #D1D1D1;
 $white: #fff;
+$border-radius: 4px; //border radius for all elements
+$border-width: 1px; //border width for alerts, cards, and badges
+$form-element-height: 38px; //height for forms elements (inputs, buttons)
+$transition-time: .7s; //transition time for all transitions
+$transition-type: ease-out; //transition type for all transitions
+$padding: 20px; //padding for buttons, alerts, cards, notes
+$big-padding: 35px; //padding for checkbox text
+$margin: 10px; //margin for progressbar, cards, alerts, 
+
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
@@ -446,7 +455,7 @@ code {
     white-space: nowrap;
     background: #F1F1F1;
     border: 1px solid #E1E1E1;
-    border-radius: 4px; }
+    border-radius: $border-radius; }
     pre > code {
     display: block;
     padding: 1rem 1.5rem;
@@ -460,24 +469,24 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
 display: inline-block;
-height: 38px;
-padding: 0 30px;
+height: $form-element-height;
+padding: 0 $padding;
 color: $grey;
 text-align: center;
 font-size: 11px;
 font-weight: 600;
-line-height: 38px;
+line-height: $form-element-height;
 letter-spacing: .1rem;
 text-transform: uppercase;
 text-decoration: none;
 white-space: nowrap;
 background-color: transparent;
--webkit-transition: background-color .7s ease-out, border-color .7s ease-out;
--moz-transition: background-color .7s ease-out, border-color .7s ease-out;
--o-transition: background-color .7s ease-out, border-color .7s ease-out;
-transition: background-color .7s ease-out, border-color .7s ease-out;
-border-radius: 4px;
-border: 1px solid $clear-grey;
+-webkit-transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+-moz-transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+-o-transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+border-radius: $border-radius;
+border: $border-width solid $clear-grey;
 cursor: pointer;
 box-sizing: border-box; }
 .button:hover,
@@ -502,10 +511,10 @@ input[type="button"].outline {
   color: $white;
   border-color: $clear-grey;
   background-color: $clear-grey;
-  -webkit-transition: background-color .7s ease-out, color .7s ease-out;
-  -moz-transition: background-color .7s ease-out, color .7s ease-out;
-  -o-transition: background-color .7s ease-out, color .7s ease-out;
-  transition: background-color .7s ease-out, color .7s ease-out;
+  -webkit-transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+  -moz-transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+  -o-transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+  transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
 }
 .button:hover.outline,
 button:hover.outline,
@@ -873,15 +882,15 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-    height: 38px;
+    height: $form-element-height;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     background-color: transparent;
     border-color: $clear-grey ;   
-    border-bottom-style: solid;
+    border-bottom-style: solid; //For safari rendering
     box-sizing: border-box; 
-    border-width: 0 0 2px;
-    transition: border-color 0.7s;
-    border-radius: 0px;
+    border-width: 0 0 $border-width;
+    transition: border-color $transition-time;
+    border-radius: 0px; //For macos rendering.
 }   
 /* Invalid */
 input[type="email"]:invalid,
@@ -907,13 +916,13 @@ input[type="url"]:disabled,
 input[type="password"]:disabled,
 textarea:disabled,
 select:disabled {
-    height: 38px;
+    height: $form-element-height;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
     background-color: transparent;
     border-color: $dark-white ;    
     box-sizing: border-box; 
-    border-width: 0 0 2px;
-    transition: border-color 0.7s;    
+    border-width: 0 0 $border-width;
+    transition: border-color $transition-time;    
 }   
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
@@ -981,8 +990,8 @@ select {
     background-repeat: no-repeat;
 }
 select:focus {
-    transition: border-color 0.7s;
-    transition: background-image 0.7s;
+    transition: border-color $transition-time;
+    transition: background-image $transition-time;
     border-color: $blue;
     background-image:
         linear-gradient(45deg, $blue 50%, transparent 50%),
@@ -1017,9 +1026,9 @@ th,
 td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid $dark-white; }
+    border-bottom: $border-width solid $dark-white; }
 table.bordered th, table.bordered td {
-    border: 1px solid $dark-white;
+    border: $border-width solid $dark-white;
 }
 th:first-child,
 td:first-child {
@@ -1029,10 +1038,10 @@ td:last-child {
     padding-right: 0; }
 
 tr {
-    -webkit-transition: background-color .7s ease-out;
-    -moz-transition: background-color .7s ease-out;
-    -o-transition: background-color .7s ease-out;
-    transition: background-color .7s ease-out;
+    -webkit-transition: background-color $transition-time $transition-type;
+    -moz-transition: background-color $transition-time $transition-type;
+    -o-transition: background-color $transition-time $transition-type;
+    transition: background-color $transition-time $transition-type;
 }
 
 table.hover tbody tr:hover {
@@ -1116,20 +1125,19 @@ hr {
     margin-top: 3rem;
     margin-bottom: 3.5rem;
     border-width: 0;
-    border-top: 1px solid #E1E1E1; }
+    border-top: $border-width solid #E1E1E1; }
 .alert {
-    padding: 20px; 
-    margin-bottom: 15px;
-    border-radius: 5px; 
-    border-width: 1px;
+    padding: $padding; 
+    margin: $margin 0;
+    border-radius: $border-radius; 
+    border-width: $border-width;
     border-style: solid;        
     color: $grey;
     border-color: $clear-grey;
 }
 
 /* The close button */
-.closebtn {
-    margin-left: 15px;
+.closebtn {    
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -1137,11 +1145,12 @@ hr {
     cursor: pointer;
 }
 .note {
-    border-radius: 4px;
+    border-radius: $border-radius;
     border-left: 6px solid;
-    padding-left: 1%;
+    // padding-left: 1%;
+    padding: $padding;
     color: $grey;
-    margin-bottom: 15px;
+    margin: $margin 0;
 }
 
 .note.danger {   
@@ -1167,14 +1176,12 @@ hr {
 .checkcontainer {
     display: block;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    font-size: 22px;
+    padding-left: $big-padding;
+    padding-top: 7px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    font-weight: 100;
+    user-select: none;    
 }
   
 /* Hide the browser's default checkbox */
@@ -1191,7 +1198,7 @@ hr {
     width: 25px;
     background-color: $clear-grey;
     border-radius: 50%;
-    transition: background-color 0.7s ease;
+    transition: background-color $transition-time $transition-type;
 }
 /* Clearer color when the mark is disabled */
 .checkcontainer input:disabled ~ .mark {
@@ -1283,8 +1290,8 @@ hr {
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 50px;
+    height: 25px;
 }
   
   /* Hide default HTML checkbox */
@@ -1299,8 +1306,8 @@ hr {
     right: 0;
     bottom: 0;
     background-color: $red;
-    -webkit-transition: .7s;
-    transition: .7s;
+    -webkit-transition: $transition-time;
+    transition: $transition-time;
 }
 
 input:disabled + .slider {
@@ -1311,13 +1318,13 @@ input:disabled + .slider {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 18px;
+    width: 18px;
     left: 4px;
     bottom: 4px;
     background-color: $white;
-    -webkit-transition: .7s;
-    transition: .7s;
+    -webkit-transition: $transition-time;
+    transition: $transition-time;
 }
   
 input:checked + .slider {
@@ -1332,9 +1339,9 @@ input:focus + .slider {
 }
   
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
 }
   
 /* Rounded sliders */
@@ -1348,11 +1355,12 @@ input:checked + .slider:before {
 .progressBar {
     width: 100%;
     background-color: $dark-white;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin: $margin 0;
+    border-radius: $border-radius;
 }
 .progress {
-    height: 5px;;
+    height: 5px;
+    border-radius: $border-radius;
 }
 .progress.primary {
     background-color: $blue;
@@ -1378,7 +1386,7 @@ input:checked + .slider:before {
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    transition: background-color .7s;
+    transition: background-color $transition-time $transition-type;
     border-radius: 50%;
 }
 
@@ -1395,7 +1403,7 @@ input:checked + .slider:before {
  .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    border-bottom: $border-width dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
@@ -1406,7 +1414,7 @@ input:checked + .slider:before {
     color: $white;
     text-align: center;
     padding: 5px 0;
-    border-radius: 6px;
+    border-radius: $border-radius;
 
     /* Position the tooltip text */
     position: absolute;
@@ -1417,7 +1425,7 @@ input:checked + .slider:before {
 
     /* Fade in tooltip */
     opacity: 0;
-    transition: opacity 0.7s ease;
+    transition: opacity $transition-time $transition-type;
 }
 
 /* Tooltip arrow */
@@ -1458,17 +1466,16 @@ input:checked + .slider:before {
 .navbar a {
     display: block;
     color: $mid-grey;
-    padding: 14px 16px;
+    padding: $padding;
     text-decoration: none;
     font-size: 17px;
-    transition: background-color 0.7s ease, color .7s ease;
-    border-radius: 4px;
+    transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+    border-radius: $border-radius;
 }
 
 .navbar .right {
     float: right;
-    margin-right: 7px;
-    margin-top: 7px;
+    margin: 15px;
 }
 
 
@@ -1500,12 +1507,12 @@ input:checked + .slider:before {
     width: 150px;    
     height: 100%;
     overflow: auto;
-    margin-top: 55px;    
+    margin-top: 68px;    
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-    margin-left: 150px;
+    margin-left: 150px; //? relative?
     /* padding: 1px 16px; */
     /* height: 1000px;  */
 }
@@ -1551,14 +1558,10 @@ div.content {
 
 .navbar input[type=text] {
     width: 130px;
-    // -webkit-transition: width 0.7s ease-in-out;
-    // transition: width 0.7s ease-in-out;
     border-width: 0px;
-    margin-top: 6px;
-    margin-bottom: 0;
-    margin-left: 5px;
+    margin:14px;
     background-color: $white;
-    border-radius: 4px;
+    border-radius: $border-radius;
 }
 
 /* When the input field gets focus, change its width to 100% */
@@ -1588,11 +1591,10 @@ div.content {
   
   
 .card {
-    border-radius: 4px;
-    border: 1px solid;   
-    padding: 7px; 
-    margin-top: 7px;
-    margin-bottom: 7px;
+    border-radius: $border-radius;
+    border: $border-width solid;   
+    padding: $padding; 
+    margin: $margin 0;
 }
 
 .card .body {
@@ -1600,15 +1602,15 @@ div.content {
     float: right;
 }
 .jumbotron {
-    border: 1px;
+    border: $border-width;
     border-color: $dark-white;
-    border-radius: 4px;
+    border-radius: $border-radius;
     background-color: $dark-white;
-    padding: 5%;
+    padding: $padding;
 }
 .badge {
     border-radius: 50%;
-    border: 1px solid;
+    border: $border-width solid;
     display: inline-block;
     padding-left: 8px;
     padding-right: 8px;
