@@ -6,7 +6,7 @@
 .navbar a {
     display: block;
     color: $mid-grey;
-    padding: 14px 16px;
+    padding: $padding;
     text-decoration: none;
     font-size: 17px;
     transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
@@ -15,8 +15,9 @@
 
 .navbar .right {
     float: right;
-    margin-right: 7px;
-    margin-top: 7px;
+    // margin-right: 10px;
+    // margin-top: 10px;
+    margin: 15px;
 }
 
 
@@ -100,9 +101,10 @@ div.content {
 .navbar input[type=text] {
     width: 130px;
     border-width: 0px;
-    margin-top: 6px;
-    margin-bottom: 0;
-    margin-left: 5px;
+    margin:14px;
+    // margin-top: 14px;
+    // margin-bottom: 0;
+    // margin-left: 5px;
     background-color: $white;
     border-radius: $border-radius;
 }

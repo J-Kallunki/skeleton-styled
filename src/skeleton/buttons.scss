@@ -7,7 +7,7 @@ input[type="reset"],
 input[type="button"] {
 display: inline-block;
 height: $form-element-height;
-padding: 0 30px;
+padding: 0 $padding;
 color: $grey;
 text-align: center;
 font-size: 11px;
