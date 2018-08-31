@@ -1513,8 +1513,6 @@ input:checked + .slider:before {
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
     margin-left: 150px; //? relative?
-    /* padding: 1px 16px; */
-    /* height: 1000px;  */
 }
 
 /* Style the links inside the navigation bar */
@@ -1636,6 +1634,50 @@ div.content {
 .badge.dark {
     border-color: $clear-grey;           
 }
+ /* Style the tab */
+ .tab {
+    overflow: hidden;
+    border: $border-width solid $dark-white;
+    background-color: $clear-grey;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: $padding;
+    transition: $transition-time;
+    color: $white;
+    border-radius: $border-radius;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+    background-color: $grey;
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+    background-color: $white;
+    border-top-color: $blue;
+    color: $dark-grey;    
+}
+
+/* Style the tab content */
+.tabcontent {
+    // display: none;
+    padding: $padding;
+    border: $border-width solid $dark-white;
+    border-top: none;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+} 
 .danger {   
     background-color: $clear-red;
     color: $red;    
