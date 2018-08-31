@@ -2,14 +2,12 @@
 .checkcontainer {
     display: block;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    font-size: 22px;
+    padding-left: $big-padding;
+    padding-top: 7px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    font-weight: 100;
+    user-select: none;    
 }
   
 /* Hide the browser's default checkbox */
@@ -26,7 +24,7 @@
     width: 25px;
     background-color: $clear-grey;
     border-radius: 50%;
-    transition: background-color 0.7s ease;
+    transition: background-color $transition-time $transition-type;
 }
 /* Clearer color when the mark is disabled */
 .checkcontainer input:disabled ~ .mark {
