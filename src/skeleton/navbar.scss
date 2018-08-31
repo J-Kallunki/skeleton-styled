@@ -15,8 +15,6 @@
 
 .navbar .right {
     float: right;
-    // margin-right: 10px;
-    // margin-top: 10px;
     margin: 15px;
 }
 
@@ -49,12 +47,12 @@
     width: 150px;    
     height: 100%;
     overflow: auto;
-    margin-top: 55px;    
+    margin-top: 68px;    
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-    margin-left: 150px;
+    margin-left: 150px; //? relative?
     /* padding: 1px 16px; */
     /* height: 1000px;  */
 }
@@ -102,9 +100,6 @@ div.content {
     width: 130px;
     border-width: 0px;
     margin:14px;
-    // margin-top: 14px;
-    // margin-bottom: 0;
-    // margin-left: 5px;
     background-color: $white;
     border-radius: $border-radius;
 }

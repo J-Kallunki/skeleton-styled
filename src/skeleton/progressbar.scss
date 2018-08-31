@@ -1,8 +1,7 @@
 .progressBar {
     width: 100%;
     background-color: $dark-white;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin: $margin 0;
     border-radius: $border-radius;
 }
 .progress {
