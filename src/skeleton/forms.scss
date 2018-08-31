@@ -15,7 +15,7 @@ select {
     border-color: $clear-grey ;   
     border-bottom-style: solid; //For safari rendering
     box-sizing: border-box; 
-    border-width: 0 0 2px;
+    border-width: 0 0 $border-width;
     transition: border-color 0.7s;
     border-radius: 0px; //For macos rendering.
 }   
@@ -48,7 +48,7 @@ select:disabled {
     background-color: transparent;
     border-color: $dark-white ;    
     box-sizing: border-box; 
-    border-width: 0 0 2px;
+    border-width: 0 0 $border-width;
     transition: border-color 0.7s;    
 }   
 /* Removes awkward default styles on some inputs for iOS */

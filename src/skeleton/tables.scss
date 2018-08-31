@@ -8,9 +8,9 @@ th,
 td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid $dark-white; }
+    border-bottom: $border-width solid $dark-white; }
 table.bordered th, table.bordered td {
-    border: 1px solid $dark-white;
+    border: $border-width solid $dark-white;
 }
 th:first-child,
 td:first-child {
