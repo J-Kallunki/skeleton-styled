@@ -18,10 +18,10 @@ text-transform: uppercase;
 text-decoration: none;
 white-space: nowrap;
 background-color: transparent;
--webkit-transition: background-color $transition-time ease-out, border-color $transition-time ease-out;
--moz-transition: background-color $transition-time ease-out, border-color $transition-time ease-out;
--o-transition: background-color $transition-time ease-out, border-color $transition-time ease-out;
-transition: background-color $transition-time ease-out, border-color $transition-time ease-out;
+-webkit-transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+-moz-transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+-o-transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
+transition: background-color $transition-time $transition-type, border-color $transition-time $transition-type;
 border-radius: $border-radius;
 border: $border-width solid $clear-grey;
 cursor: pointer;
@@ -48,10 +48,10 @@ input[type="button"].outline {
   color: $white;
   border-color: $clear-grey;
   background-color: $clear-grey;
-  -webkit-transition: background-color $transition-time ease-out, color $transition-time ease-out;
-  -moz-transition: background-color $transition-time ease-out, color $transition-time ease-out;
-  -o-transition: background-color $transition-time ease-out, color $transition-time ease-out;
-  transition: background-color $transition-time ease-out, color $transition-time ease-out;
+  -webkit-transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+  -moz-transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+  -o-transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
+  transition: background-color $transition-time $transition-type, color $transition-time $transition-type;
 }
 .button:hover.outline,
 button:hover.outline,

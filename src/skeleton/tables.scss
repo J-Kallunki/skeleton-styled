@@ -20,10 +20,10 @@ td:last-child {
     padding-right: 0; }
 
 tr {
-    -webkit-transition: background-color $transition-time ease-out;
-    -moz-transition: background-color $transition-time ease-out;
-    -o-transition: background-color $transition-time ease-out;
-    transition: background-color $transition-time ease-out;
+    -webkit-transition: background-color $transition-time $transition-type;
+    -moz-transition: background-color $transition-time $transition-type;
+    -o-transition: background-color $transition-time $transition-type;
+    transition: background-color $transition-time $transition-type;
 }
 
 table.hover tbody tr:hover {

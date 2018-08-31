@@ -24,7 +24,7 @@
 
     /* Fade in tooltip */
     opacity: 0;
-    transition: opacity $transition-time ease;
+    transition: opacity $transition-time $transition-type;
 }
 
 /* Tooltip arrow */
