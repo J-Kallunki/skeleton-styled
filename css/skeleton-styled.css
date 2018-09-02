@@ -1428,7 +1428,9 @@ input:checked + .slider:before {
 
 /* Add an active class to highlight the current page */
 .navbar a.active {
-  color: #fff; }
+  color: #fff;
+  background-color: #222;
+  border-radius: 0; }
 
 /* Add a grey background on topnav links and the dropdown button on hover */
 .navbar a:hover {

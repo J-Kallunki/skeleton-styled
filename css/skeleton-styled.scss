@@ -364,6 +364,9 @@ $blue: #33C3F0;
 $mid-blue: #8497aa;
 $clear-blue: #e1f0ff;
 
+//Black colors
+$clear-black: #222;
+
 // Grey colors
 $dark-grey: #444;
 $grey: #555;
@@ -1482,6 +1485,8 @@ input:checked + .slider:before {
 /* Add an active class to highlight the current page */
 .navbar a.active {    
     color: $white;
+    background-color: $clear-black;
+    border-radius: 0;
 }
 
 /* Add a grey background on topnav links and the dropdown button on hover */

@@ -22,6 +22,8 @@
 /* Add an active class to highlight the current page */
 .navbar a.active {    
     color: $white;
+    background-color: $clear-black;
+    border-radius: 0;
 }
 
 /* Add a grey background on topnav links and the dropdown button on hover */
