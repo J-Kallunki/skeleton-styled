@@ -718,8 +718,8 @@ input[type="submit"].button-warning,
 input[type="reset"].button-warning,
 input[type="button"].button-warning {
   color: #fff;
-  background-color: #a1a103;
-  border-color: #a1a103; }
+  background-color: #d4d400;
+  border-color: #d4d400; }
 
 .button.button-warning:hover,
 button.button-warning:hover,
@@ -732,8 +732,8 @@ input[type="submit"].button-warning:focus,
 input[type="reset"].button-warning:focus,
 input[type="button"].button-warning:focus {
   color: #fff;
-  background-color: #777700;
-  border-color: #777700; }
+  background-color: #c9c900;
+  border-color: #c9c900; }
 
 /* Button warning outline */
 .button.button-warning.outline,
@@ -741,9 +741,9 @@ button.button-warning.outline,
 input[type="submit"].button-warning.outline,
 input[type="reset"].button-warning.outline,
 input[type="button"].button-warning.outline {
-  color: #a1a103;
+  color: #d4d400;
   background-color: transparent;
-  border-color: #a1a103; }
+  border-color: #d4d400; }
 
 .button.button-warning:hover.outline,
 button.button-warning:hover.outline,
@@ -756,8 +756,8 @@ input[type="submit"].button-warning:focus.outline,
 input[type="reset"].button-warning:focus.outline,
 input[type="button"].button-warning:focus.outline {
   color: #fff;
-  background-color: #a1a103;
-  border-color: #a1a103; }
+  background-color: #d4d400;
+  border-color: #d4d400; }
 
 /* Warning disabled */
 .button.button-warning:disabled,
@@ -1124,7 +1124,7 @@ hr {
   border-left-color: #16a516; }
 
 .note.warning {
-  border-left-color: #a1a103; }
+  border-left-color: #d4d400; }
 
 .note.primary {
   border-left-color: #33C3F0; }
@@ -1311,7 +1311,7 @@ input:checked + .slider:before {
   background-color: #16a516; }
 
 .progress.warning {
-  background-color: #a1a103; }
+  background-color: #d4d400; }
 
 .progress.danger {
   background-color: #c94c4c; }
@@ -1551,7 +1551,7 @@ div.content {
   border-color: #16a516; }
 
 .badge.warning {
-  border-color: #a1a103; }
+  border-color: #d4d400; }
 
 .badge.primary {
   border-color: #33C3F0; }
@@ -1626,7 +1626,7 @@ div.content {
 
 .warning {
   background-color: #ffffc6;
-  color: #a1a103;
+  color: #d4d400;
   border-color: #a7a779; }
 
 .warning hr {
