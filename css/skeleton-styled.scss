@@ -1513,8 +1513,6 @@ input:checked + .slider:before {
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
     margin-left: 150px; //? relative?
-    /* padding: 1px 16px; */
-    /* height: 1000px;  */
 }
 
 /* Style the links inside the navigation bar */
@@ -1636,6 +1634,62 @@ div.content {
 .badge.dark {
     border-color: $clear-grey;           
 }
+ /* Style the tab */
+ .tab {
+    overflow: hidden;
+    //border: $border-width solid $dark-white;
+    background-color: $clear-grey;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    border-top: $border-width solid $dark-white;
+    border-left: $border-width solid $dark-white;
+    border-right: $border-width solid $dark-white;
+    
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: $padding;
+    transition: $transition-time;
+    color: $white;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.tab a:first-child {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: 0 !important;
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+    background-color: $grey;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+    background-color: $white;    
+    color: $dark-grey;   
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius; 
+}
+
+/* Style the tab content */
+.tabcontent {
+    // display: none;
+    padding: $padding;
+    border: $border-width solid $dark-white;
+    border-top: none;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+} 
 .danger {   
     background-color: $clear-red;
     color: $red;    
