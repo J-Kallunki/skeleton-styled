@@ -1637,10 +1637,14 @@ div.content {
  /* Style the tab */
  .tab {
     overflow: hidden;
-    border: $border-width solid $dark-white;
+    //border: $border-width solid $dark-white;
     background-color: $clear-grey;
     border-top-right-radius: $border-radius;
     border-top-left-radius: $border-radius;
+    border-top: $border-width solid $dark-white;
+    border-left: $border-width solid $dark-white;
+    border-right: $border-width solid $dark-white;
+    
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -1653,20 +1657,28 @@ div.content {
     padding: $padding;
     transition: $transition-time;
     color: $white;
-    border-radius: $border-radius;
     font-size: 17px;
+    text-decoration: none;
+}
+
+.tab a:first-child {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: 0 !important;
 }
 
 /* Change background color of buttons on hover */
 .tab a:hover {
     background-color: $grey;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
 }
 
 /* Create an active/current tablink class */
 .tab a.active {
-    background-color: $white;
-    border-top-color: $blue;
-    color: $dark-grey;    
+    background-color: $white;    
+    color: $dark-grey;   
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius; 
 }
 
 /* Style the tab content */
