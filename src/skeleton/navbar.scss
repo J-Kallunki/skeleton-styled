@@ -54,7 +54,8 @@
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-    margin-left: 150px; //? relative?
+    margin-left: 150px; //? relative?  
+    padding-top: 72px;  
 }
 
 /* Style the links inside the navigation bar */
