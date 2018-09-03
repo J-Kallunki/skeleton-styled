@@ -883,7 +883,7 @@ input[type="password"]:invalid,
 textarea:invalid,
 select:invalid {
   background-color: transparent;
-  border-color: #c94c4c;
+  border-color: #c94c4c !important;
   -webkit-box-shadow: none;
   box-shadow: none;
   caret-color: #c94c4c;
