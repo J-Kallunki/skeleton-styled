@@ -270,6 +270,17 @@
   .container {
     width: 92%;
   }
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+  
+  .col-lg-12 {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 48em) {
@@ -505,7 +516,7 @@
 
 @media only screen and (min-width: 64em) {
   .container {
-    width: 65rem;
+    width: 70rem;
   }
 
   .col-md,
