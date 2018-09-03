@@ -31,7 +31,7 @@ input[type="password"]:invalid,
 textarea:invalid,
 select:invalid {        
     background-color: transparent;
-    border-color: $red ;    
+    border-color: $red !important;    
     box-shadow: none;    
     caret-color: $red;
     color: $red;
