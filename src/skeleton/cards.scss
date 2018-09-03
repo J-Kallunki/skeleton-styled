@@ -9,3 +9,21 @@
     text-align: right;
     float: right;
 }
+
+@media (min-width: 300px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 720px) {
+    .card i.fas{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .card i.fas {
+        font-size: 5em;
+    }
+}

@@ -13,9 +13,22 @@
     border-radius: $border-radius;
 }
 
+@media (max-width: 800px) {
+    .navbar a {
+        padding: $padding 1%;
+    }
+
+    .navbar input[type=text] {        
+        margin: 14px 7px !important;            
+    }
+}
+
+
+
 .navbar .right {
     float: right;
-    margin: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
 }
 
 
@@ -49,12 +62,13 @@
     width: 150px;    
     height: 100%;
     overflow: auto;
-    margin-top: 68px;    
+    margin-top: 67px;    
 }
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
-    margin-left: 150px; //? relative?
+    margin-left: 150px; //? relative?  
+    padding-top: 72px;  
 }
 
 /* Style the links inside the navigation bar */
@@ -71,6 +85,14 @@ div.content {
   .top a.icon {
     float: right;
     display: block;
+  }
+
+  .top input {
+      display: none;
+  }
+  
+  .top button[type="submit"] {
+    display:none;
   }
 }
 
@@ -104,6 +126,16 @@ div.content {
     border-radius: $border-radius;
 }
 
+@media (max-width: 650px) {
+    .navbar input[type=text] {
+        display: none;
+    }
+
+    .navbar button[type=submit] {
+        display: none;
+    }
+}
+
 /* When the input field gets focus, change its width to 100% */
 // .navbar input[type=text]:focus {
 //     width: 15%;
@@ -126,6 +158,7 @@ div.content {
     .side a {
         text-align: center;
         float: none;
+        position: relative;
     }
 } 
   
