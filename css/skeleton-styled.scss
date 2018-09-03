@@ -894,6 +894,7 @@ select {
     border-width: 0 0 $border-width;
     transition: border-color $transition-time;
     border-radius: 0px; //For macos rendering.
+    caret-color: $clear-black;
 }   
 /* Invalid */
 input[type="email"]:invalid,
@@ -908,6 +909,8 @@ select:invalid {
     background-color: transparent;
     border-color: $red ;    
     box-shadow: none;    
+    caret-color: $red;
+    color: $red;
 }   
 /*Disabled */
 input[type="email"]:disabled,
@@ -925,7 +928,8 @@ select:disabled {
     border-color: $dark-white ;    
     box-sizing: border-box; 
     border-width: 0 0 $border-width;
-    transition: border-color $transition-time;    
+    transition: border-color $transition-time;  
+    color: $clear-grey;  
 }   
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
