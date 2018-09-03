@@ -869,7 +869,8 @@ select {
   border-width: 0 0 1px;
   -webkit-transition: border-color 0.7s;
   transition: border-color 0.7s;
-  border-radius: 0px; }
+  border-radius: 0px;
+  caret-color: #222; }
 
 /* Invalid */
 input[type="email"]:invalid,
@@ -884,7 +885,9 @@ select:invalid {
   background-color: transparent;
   border-color: #c94c4c;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  caret-color: #c94c4c;
+  color: #c94c4c; }
 
 /*Disabled */
 input[type="email"]:disabled,
@@ -905,7 +908,8 @@ select:disabled {
   box-sizing: border-box;
   border-width: 0 0 1px;
   -webkit-transition: border-color 0.7s;
-  transition: border-color 0.7s; }
+  transition: border-color 0.7s;
+  color: #999; }
 
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
@@ -965,7 +969,7 @@ select {
   -moz-appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, #999 50%), linear-gradient(135deg, #999 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat; }
 
 select:focus {
@@ -976,7 +980,7 @@ select:focus {
   border-color: #33C3F0;
   background-image: linear-gradient(45deg, #33C3F0 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #33C3F0 50%);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
   outline: 0; }
 
