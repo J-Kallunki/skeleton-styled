@@ -1,12 +1,12 @@
 # skeleton-styled 1.0.0-alpha
 
-skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox) basically is the same skeleton with flexbox added and more styles. Just a step forward to a framework trying to keep the css lightweight. 
+skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox). Basically is the same skeleton with flexbox added and more styles. Just a step forward to a framework trying to keep the css lightweight. 
 
 [Demo](https://44r0n.github.io/skeleton-styled/).
 
 ## Getting Started
 
-Check the acutal release. Get `skeleton-styled.css` for developing purpose and `skeleton-styled.min.css` for production prupose.
+Check the actual release. Get `skeleton-styled.css` for developing purpose and `skeleton-styled.min.css` for production prupose.
 
 ### Installing
 
@@ -18,6 +18,14 @@ Copy `skeleton-styled.css` or `skeleton-styled.min.css` file to your css project
 
 ### Install with NPM
 On progress
+
+### Delevop purpose
+
+`npm` is needed for delevopment.
+
+1. `git clone https://github.com/44r0n/skeleton-styled.git`
+2. `npm i`
+3. `npm run gulp build` for a single build, or `npm run gulp` for auto-rerun when a file changes.
 
 ## Documentation
 
@@ -43,7 +51,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Andre O'Brien** - *Initial work* - [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox)
+* **[Dave Gamache](https://twitter.com/dhg)** - *Initial work* - [skeleton](https://github.com/dhg/Skeleton)
+* **Andre O'Brien** - *Add flexbox* - [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox)
 * **Aarón Sánchez** - *Adding styles*
 
 ## License
