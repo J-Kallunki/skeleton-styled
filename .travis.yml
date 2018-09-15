@@ -15,5 +15,5 @@ deploy:
   provider: npm
   email: "$npm_email"
   api_key: "$npm_token"
-on:
-  tags: true
+  on:
+    tags: true
