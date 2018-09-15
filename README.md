@@ -18,7 +18,7 @@ Copy `skeleton-styled.css` or `skeleton-styled.min.css` file to your css project
 
 ### Install with NPM
 
-npm install skeleton-styled
+`npm install skeleton-styled`
 
 ### Delevop purpose
 
