@@ -9,3 +9,10 @@ jobs:
       script:
         - npm install
         - npm run gulp build
+    - deploy:
+      name: "Deploy to npm"
+      provider: npm
+      email: "$npm_email"
+      api_key: "$npm_token"
+      on:
+        tags: true
