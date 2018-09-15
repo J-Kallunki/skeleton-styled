@@ -1,0 +1,19 @@
+languaje: node_js
+node_js:
+  - "node" #latest stable Node.js release 
+
+jobs:
+  include:
+    - stage: build
+      name: "Build css"
+      script:
+        - npm install
+        - npm run gulp build
+
+deploy:
+  name: "Deploy to npm"
+  provider: npm
+  email: "$npm_email"
+  api_key: "$npm_token"
+on:
+  tags: true
