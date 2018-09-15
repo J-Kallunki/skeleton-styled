@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/44r0n/skeleton-styled.svg?branch=master)](https://travis-ci.org/44r0n/skeleton-styled)
+
 # skeleton-styled 1.0.0-alpha
 
 skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox). Basically is the same skeleton with flexbox added and more styles. Just a step forward to a framework trying to keep the css lightweight. 
