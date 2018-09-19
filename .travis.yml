@@ -12,11 +12,8 @@ jobs:
 
 deploy:  
   - provider: npm
-  name: "Deploy to npm"
   email: "$npm_email"
-  api_key: "$npm_token"
-  on:
-    tags: true
+  api_key: "$npm_token"  
   - provider: releases
   name: "Deploy to github releases"
   api_key: "$github_release"
