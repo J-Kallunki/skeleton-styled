@@ -14,8 +14,8 @@ jobs:
       name: "Deploy to npm"
       email: "$npm_email"
       api_key: "$npm_token"
-      on:
-        tags: true
+        on:
+          tags: true
     - stage: deploy
       provider: releases
       name: "Deploy to github releases"
@@ -23,5 +23,5 @@ jobs:
       file: 
         - "css/*"
       skip_cleanup: true
-      on:
-        tags: true
+        on:
+          tags: true
