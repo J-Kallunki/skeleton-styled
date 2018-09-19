@@ -2,26 +2,22 @@ languaje: node_js
 node_js:
   - "node" #latest stable Node.js release 
 
-jobs:
-  include:
-    - stage: build
-      name: "Build css"
-      script:
-        - npm install
-        - npm run gulp build
-    - stage: deploy
-      provider: npm
-      name: "Deploy to npm"
-      email: "$npm_email"
-      api_key: "$npm_token"
-        on:
-          tags: true
-    - stage: deploy
-      provider: releases
-      name: "Deploy to github releases"
-      api_key: "$github_release"
-      file: 
-        - "css/*"
-      skip_cleanup: true
-        on:
-          tags: true
+install:
+  - npm install
+script:
+  - npm run gulp build
+deploy:
+  provider: npm
+  name: "Deploy to npm"
+  email: "$npm_email"
+  api_key: "$npm_token"
+  on:
+    tags: true
+deploy:
+  provider: releases
+  name: "Deploy to github releases"
+  api_key: "$github_release"
+  file: "css/*"
+  skip_cleanup: true
+  on:
+    tags: true
