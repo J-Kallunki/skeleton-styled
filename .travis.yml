@@ -10,10 +10,18 @@ jobs:
         - npm install
         - npm run gulp build
 
-deploy:
+deploy:  
+  - provider: npm
   name: "Deploy to npm"
-  provider: npm
   email: "$npm_email"
   api_key: "$npm_token"
+  on:
+    tags: true
+  - provider: releases
+  name: "Deploy to github releases"
+  api_key: "$github_release"
+  file: 
+    - "css/*"
+  skip_cleanup: true
   on:
     tags: true
