@@ -15,7 +15,6 @@ deploy:
   email: "$npm_email"
   api_key: "$npm_token"  
   - provider: releases
-  name: "Deploy to github releases"
   api_key: "$github_release"
   file: 
     - "css/*"
