@@ -2,10 +2,16 @@ languaje: node_js
 node_js:
   - "node" #latest stable Node.js release 
 
+cache:
+  directories:
+    - "node_modules"
+
 install:
   - npm install
+
 script:
   - npm run gulp build
+
 deploy:
   provider: npm
   name: "Deploy to npm"
@@ -13,6 +19,7 @@ deploy:
   api_key: "$npm_token"
   on:
     tags: true
+    
 deploy:
   provider: releases
   name: "Deploy to github releases"
