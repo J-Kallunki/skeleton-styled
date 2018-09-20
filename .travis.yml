@@ -14,17 +14,17 @@ script:
 
 deploy:
   - provider: npm
-  name: "Deploy to npm"
-  email: "$npm_email"
-  api_key: "$npm_token"
-  on:
-    tags: true
+    name: "Deploy to npm"
+    email: "$npm_email"
+    api_key: "$npm_token"
+    on:
+      tags: true
   - provider: releases
-  name: "Deploy to github releases"
-  api_key: "$github_release"
-  file: 
-    - "css/*"
-    - "javascript/*"
-  skip_cleanup: true
-  on:
-    tags: true
+    name: "Deploy to github releases"
+    api_key: "$github_release"
+    file: 
+      - "css/*"
+      - "javascript/*"
+    skip_cleanup: true
+    on:
+      tags: true
