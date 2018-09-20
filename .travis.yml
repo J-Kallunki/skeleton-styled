@@ -13,18 +13,18 @@ script:
   - npm run gulp build
 
 deploy:
-  provider: npm
+  - provider: npm
   name: "Deploy to npm"
   email: "$npm_email"
   api_key: "$npm_token"
   on:
     tags: true
-    
-deploy:
-  provider: releases
+  - provider: releases
   name: "Deploy to github releases"
   api_key: "$github_release"
-  file: "css/*"
+  file: 
+    - "css/*"
+    - "javascript/*"
   skip_cleanup: true
   on:
     tags: true
