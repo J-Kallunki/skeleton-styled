@@ -9,13 +9,16 @@ skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz
 ## Getting Started
 
 Check the actual release. Get `skeleton-styled.css` for developing purpose and `skeleton-styled.min.css` for production prupose.
+If you want the `javascript` features, get `skeleton-styled.js` for developing purpose and `skeleton-styled.min.js` for production prupose.
 
 ### Installing
 
 Copy `skeleton-styled.css` or `skeleton-styled.min.css` file to your css project folder and reference it from your html files.
+Also, if you want the `javascript` features, copy `skeleton-styled.js` or `skeleton-styled.min.css` file to your javascript project folder and reference it.
 
 ~~~html
 <link rel="stylesheet" href="css/skeleton-styled.min.css">
+<script src="javascript/skeleton-styled.min.js"></script>
 ~~~
 
 ### Install with NPM
