@@ -36,6 +36,7 @@ const settings = {
         'src/skeleton/jumbotron.scss',
         'src/skeleton/badges.scss',
         'src/skeleton/tabs.scss',
+        'src/skeleton/dropdown.scss',
         'src/skeleton/element-colors.scss', //? keep as last element
 
         // // Flexbox-Grid:
