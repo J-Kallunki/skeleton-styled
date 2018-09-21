@@ -1,8 +1,10 @@
 [![Build Status](https://travis-ci.org/44r0n/skeleton-styled.svg?branch=master)](https://travis-ci.org/44r0n/skeleton-styled)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=44r0n/skeleton-styled)](https://dependabot.com)
-[![PRs welcome](https://img.shields.io/badge/pull_request-welcome-brightgreen.svg)](http://makeapullrequest.com/)
+[![PRs welcome](https://img.shields.io/badge/pull_requests-welcome-brightgreen.svg)](http://makeapullrequest.com/)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/44r0n/skeleton-styled/issues)
-
+[![npm](https://img.shields.io/npm/v/skeleton-styled.svg)](https://www.npmjs.com/package/skeleton-styled)
+[![GitHub (pre-)release](https://img.shields.io/github/release/44r0n/skeleton-styled/all.svg)](https://github.com/44r0n/skeleton-styled/releases)
+![npm](https://img.shields.io/npm/dt/skeleton-styled.svg)
 ---
 
 # skeleton-styled 1.0.0-beta
