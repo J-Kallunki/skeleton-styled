@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/44r0n/skeleton-styled.svg?branch=master)](https://travis-ci.org/44r0n/skeleton-styled)
 
-# skeleton-styled 1.0.0-alpha
+# skeleton-styled 1.0.0-beta
 
 skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox). Basically is the same skeleton with flexbox added and more styles. Just a step forward to a framework trying to keep the css lightweight. 
 
@@ -46,6 +46,7 @@ Gulp setup based on: simple-gulp-setup (https://github.com/andreobriennz/simple-
 - Skeleton (http://getskeleton.com/)
 - Flexbox-Grid (https://github.com/kristoferjoseph/flexboxgrid)
 - Normalize 8.0.0
+- Fontawesome (https://fontawesome.com/)
 
 ## Contributing
 
