@@ -6,9 +6,11 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 
 const settings = {
     dist: 'css', 
+    jsdist: 'javascript',
     styles: [ 
         'src/normalize.scss',
 
@@ -34,10 +36,14 @@ const settings = {
         'src/skeleton/jumbotron.scss',
         'src/skeleton/badges.scss',
         'src/skeleton/tabs.scss',
+        'src/skeleton/dropdown.scss',
         'src/skeleton/element-colors.scss', //? keep as last element
 
         // // Flexbox-Grid:
         'src/flexbox-grid.scss',
+    ],
+    jsFiles: [
+        'src/javascript/*.js'
     ],
 }
 
@@ -59,11 +65,21 @@ gulp.task('sass', function () {
         .pipe(gulp.dest( settings.dist ));
 });
 
+gulp.task('js', function () {   
+    gulp.src(settings.jsFiles)
+        .pipe(concat('skeleton-styled.js'))
+        .pipe(gulp.dest(settings.jsdist))
+        .pipe(uglify())
+        .pipe(rename('skeleton-styled.min.js'))
+        .pipe(gulp.dest(settings.jsdist));
+});
+
 // WATCH FOR CHANGES
 gulp.task('watch', function() {
     gulp.watch( settings.styles, ['sass']);
+    gulp.watch(settings.jsFiles, ['js']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'js', 'watch']);
 
-gulp.task('build',['sass']);
+gulp.task('build',['sass', 'js']);

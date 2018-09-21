@@ -1,6 +1,6 @@
 {
   "name": "skeleton-styled",
-  "version": "1.0.0-alpha-6",
+  "version": "1.0.0-beta-1",
   "description": "The popular Skeleton CSS boilerplate with Flexbox-Grid and Normalize 8, now with more styles.",  
   "scripts": {
     "gulp build": "./node_modules/.bin/gulp build",
@@ -8,7 +8,8 @@
     "test": "snyk test"
   },
   "files": [
-    "css/*"
+    "css/*",
+    "javascript/*"
   ],
   "repository": {
     "type": "git",

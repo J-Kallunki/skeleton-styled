@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/44r0n/skeleton-styled.svg?branch=master)](https://travis-ci.org/44r0n/skeleton-styled)
 
-# skeleton-styled 1.0.0-alpha
+# skeleton-styled 1.0.0-beta
 
 skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz/skeleton-flexbox). Basically is the same skeleton with flexbox added and more styles. Just a step forward to a framework trying to keep the css lightweight. 
 
@@ -9,13 +9,16 @@ skeleton-styled is a fork of [skeleton-flexbox](https://github.com/andreobriennz
 ## Getting Started
 
 Check the actual release. Get `skeleton-styled.css` for developing purpose and `skeleton-styled.min.css` for production prupose.
+If you want the `javascript` features, get `skeleton-styled.js` for developing purpose and `skeleton-styled.min.js` for production prupose.
 
 ### Installing
 
 Copy `skeleton-styled.css` or `skeleton-styled.min.css` file to your css project folder and reference it from your html files.
+Also, if you want the `javascript` features, copy `skeleton-styled.js` or `skeleton-styled.min.css` file to your javascript project folder and reference it.
 
 ~~~html
 <link rel="stylesheet" href="css/skeleton-styled.min.css">
+<script src="javascript/skeleton-styled.min.js"></script>
 ~~~
 
 ### Install with NPM
@@ -43,6 +46,7 @@ Gulp setup based on: simple-gulp-setup (https://github.com/andreobriennz/simple-
 - Skeleton (http://getskeleton.com/)
 - Flexbox-Grid (https://github.com/kristoferjoseph/flexboxgrid)
 - Normalize 8.0.0
+- Fontawesome (https://fontawesome.com/)
 
 ## Contributing
 
