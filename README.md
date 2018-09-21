@@ -1,4 +1,9 @@
 [![Build Status](https://travis-ci.org/44r0n/skeleton-styled.svg?branch=master)](https://travis-ci.org/44r0n/skeleton-styled)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=44r0n/skeleton-styled)](https://dependabot.com)
+[![PRs welcome](https://img.shields.io/badge/pull_request-welcome-brightgreen.svg)](http://makeapullrequest.com/)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/44r0n/skeleton-styled/issues)
+
+---
 
 # skeleton-styled 1.0.0-beta
 
