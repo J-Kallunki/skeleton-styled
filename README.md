@@ -5,6 +5,7 @@
 [![npm](https://img.shields.io/npm/v/skeleton-styled.svg)](https://www.npmjs.com/package/skeleton-styled)
 [![GitHub (pre-)release](https://img.shields.io/github/release/44r0n/skeleton-styled/all.svg)](https://github.com/44r0n/skeleton-styled/releases)
 ![npm](https://img.shields.io/npm/dt/skeleton-styled.svg)
+
 ---
 
 # skeleton-styled 1.0.0-beta
