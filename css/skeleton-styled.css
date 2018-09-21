@@ -1473,7 +1473,7 @@ div.content {
   padding-top: 72px; }
 
 /* Style the links inside the navigation bar */
-.top a {
+.top > a {
   float: left;
   text-align: center; }
 
@@ -1642,6 +1642,37 @@ div.content {
   border-top: none;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px; }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  overflow: hidden; }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  margin-top: 67px; }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #777;
+  text-decoration: none;
+  display: block; }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #555;
+  color: #fff; }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block; }
 
 .danger {
   background-color: #ffdddd;
