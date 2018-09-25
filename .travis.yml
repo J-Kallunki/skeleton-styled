@@ -12,6 +12,10 @@ install:
 script:
   - npm run gulp build
 
+before_deploy:
+  - npm config set git-tag-version false
+  - npm version $TRAVIS_TAG
+
 deploy:
   - provider: npm
     name: "$TRAVIS_TAG"
