@@ -25,6 +25,7 @@
 /* Style the accordion panel. Note: hidden by default */
 .panel {
     padding: 0 18px;
-    display: none;
+    max-height: 0px;
     overflow: hidden;
+    transition: max-height $transition-time $transition-type;
 }
