@@ -37,6 +37,7 @@ const settings = {
         'src/skeleton/badges.scss',
         'src/skeleton/tabs.scss',
         'src/skeleton/dropdown.scss',
+        'src/skeleton/accordion.scss',
         'src/skeleton/element-colors.scss', //? keep as last element
 
         // // Flexbox-Grid:

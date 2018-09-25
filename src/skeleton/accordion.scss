@@ -1,0 +1,30 @@
+.accordion-container > button {
+
+    cursor: pointer;    
+    width: 100%;
+    text-align: left;
+    outline: none;
+    margin-bottom: 0px;
+    border-radius: 0;
+}
+
+.accordion-container > button:first-child {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+.accordion-container > button:last-of-type {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.accordion-container {
+    border-radius: $border-radius;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
