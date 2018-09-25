@@ -14,13 +14,13 @@ script:
 
 deploy:
   - provider: npm
-    name: "Deploy to npm"
+    name: "$TRAVIS_TAG"
     email: "$npm_email"
     api_key: "$npm_token"
     on:
       tags: true
   - provider: releases
-    name: "Deploy to github releases"
+    name: "$TRAVIS_TAG"
     api_key: "$github_release"
     file: 
       - "css/*"
