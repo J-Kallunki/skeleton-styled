@@ -12,15 +12,19 @@ install:
 script:
   - npm run gulp build
 
+before_deploy:
+  - npm config set git-tag-version false
+  - npm version $TRAVIS_TAG
+
 deploy:
   - provider: npm
-    name: "Deploy to npm"
+    name: "$TRAVIS_TAG"
     email: "$npm_email"
     api_key: "$npm_token"
     on:
       tags: true
   - provider: releases
-    name: "Deploy to github releases"
+    name: "$TRAVIS_TAG"
     api_key: "$github_release"
     file: 
       - "css/*"
