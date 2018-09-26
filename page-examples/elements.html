@@ -91,12 +91,21 @@
                     <button class="button-danger" disabled>Danger</button>
                     <button class="button-dark" disabled>Dark</button>
                     <h1>Outline disabled buttons</h1>
+                    <hr />
                     <button class="button outline" disabled>Default</button>
                     <button class="button-primary outline" disabled>Primary</button>
                     <button class="button-success outline" disabled>Success</button>
                     <button class="button-warning outline" disabled>Warning</button>
                     <button class="button-danger outline" disabled>Danger</button>
                     <button class="button-dark outline" disabled>Dark</button>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-12" style="margin-top: 5%">
+                    <h1>Modal window</h1>
+                    <hr />
+                    <button class="button-dark outline" onclick="openModal('myModal');">open modal</button>
+                    <button class="button-success outline" onclick="openModal('modalAlert');">open alert modal</button>
                 </div>
             </div>
             <div class="row">
@@ -213,6 +222,34 @@
             </div>
         </div>
     </div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('myModal');">&times;</span>
+            <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+            <h3>Footer</h3>
+            <div  style="text-align: right;">
+                <button class="button-danger" onclick="closeModal('myModal');">Close</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div id="modalAlert" class="modal">
+    <div class="modal-content success">
+        <div class="modal-header"><span class="closebtn" onclick="closeModal('modalAlert');">&times;</span></div>
+        <div class="modal-body">
+            This is an alert modal.
+        </div>
+    </div>
+</div>
 <script src="../javascript/skeleton-styled.min.js"></script>
 </body>
 </html>
