@@ -35,6 +35,13 @@ window.onclick = function(event) {
     }
   }
 } 
+function openModal(modalName){
+    document.getElementById(modalName).style.display = "block";
+}
+
+function closeModal(modalName) {
+    document.getElementById(modalName).style.display = "none";
+}
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
 }
