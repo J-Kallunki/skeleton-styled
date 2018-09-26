@@ -1,19 +1,32 @@
  /* Pagination links */
- .pagination a {
+ .pagination * {
     color: black;
-    float: left;
+    // float: center;
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color $transition-time $transition-type;
     border-radius: 50%;
+    display: inline-block;
 }
 
 /* Style the active/current link */
-.pagination a.active {
-    background-color: #33C3F0;
-    color: #fff;
+.pagination .active {
+    background-color: $blue;
+    color: $white;
     border-radius: 50%;
 }
 
 /* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: #D1D1D1;} 
+.pagination *:hover:not(.active) {
+    background-color: $dark-white;
+    color: $white;
+} 
+
+.dot {
+    cursor: pointer;
+    height: 7px;
+    margin: 0 2px;
+    background-color: $clear-grey;
+    border-radius: 50%;
+    display: inline-block;    
+  }
