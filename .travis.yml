@@ -15,7 +15,7 @@ script:
 before_deploy:
   - npm config set git-tag-version false
   - npm version $TRAVIS_TAG
-  - git commit --ammend -m "Change npm version"
+  - git commit --amend -m "Change npm version"
 
 after_deploy:
   - git config --global user.email "travis@travis-ci.org"
