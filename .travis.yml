@@ -12,19 +12,6 @@ install:
 script:
   - npm run gulp build
 
-brefore_script:
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "Travis CI"
-
-before_deploy:
-  - npm config set git-tag-version false
-  - npm version $TRAVIS_TAG
-  - npm version  
-  - git commit --amend -a -m "Change npm version"
-
-after_deploy:
-  - git push --force origin master
-
 deploy:
   - provider: npm
     name: "$TRAVIS_TAG"
