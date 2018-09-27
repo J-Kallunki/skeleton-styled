@@ -2,17 +2,10 @@ languaje: node_js
 node_js:
   - "node" #latest stable Node.js release 
 
-cache:
-  directories:
-    - "node_modules"
-
-stages:
-  - build
-
 jobs:
   include:
     - stage: build
-      name: "Build"
-    - script:
-      - npm install
-      - npm run gulp build
+      name: "Build css"
+      script:
+        - npm install
+        - npm run gulp build
