@@ -16,8 +16,7 @@ jobs:
         - npm run gulp build
     - stage: githubDeploy
       name: "Deploy to Github"
-      provider: releases
-      name: "$TRAVIS_TAG"
+      provider: releases      
       api_key: "$github_release"
       file: 
         - "css/*"
