@@ -19,8 +19,7 @@ jobs:
       name: "Deploy to npm"
       email: "$npm_email"
       api_key: "$npm_token"
-      script: 
-        - npm install 
+      script:
         - npm version $TRAVIS_TAG
       skip_cleanup: true
       
