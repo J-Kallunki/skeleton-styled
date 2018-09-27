@@ -6,26 +6,13 @@ cache:
   directories:
     - "node_modules"
 
-install:
-  - npm install
+stages:
+  - build
 
-script:
-  - npm run gulp build
-
-deploy:
-  - provider: npm
-    name: "$TRAVIS_TAG"
-    email: "$npm_email"
-    api_key: "$npm_token"
-    skip_cleanup: true
-    on:
-      tags: true
-  - provider: releases
-    name: "$TRAVIS_TAG"
-    api_key: "$github_release"
-    file: 
-      - "css/*"
-      - "javascript/*"
-    skip_cleanup: true
-    on:
-      tags: true
+jobs:
+  include:
+    - stage: build
+      name: "Build"
+    - script:
+      - npm install
+      - npm run gulp build
