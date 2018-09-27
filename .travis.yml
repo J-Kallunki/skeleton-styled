@@ -21,6 +21,6 @@ jobs:
       api_key: "$npm_token"
       script: 
         - npm install 
-        - npm varsion $TRAVIS_TAG
+        - npm version $TRAVIS_TAG
       skip_cleanup: true
       
