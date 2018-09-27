@@ -40,6 +40,7 @@ const settings = {
         'src/skeleton/accordion.scss',
         'src/skeleton/slideShow.scss',
         'src/skeleton/modal.scss',
+        'src/skeleton/imgToPreview.scss',
         'src/skeleton/element-colors.scss', //? keep as last element
 
         // // Flexbox-Grid:
