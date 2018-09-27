@@ -42,6 +42,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1>Elements</h1>
+                    <hr />
                 </div>
             </div>
             <div class="row">
@@ -56,6 +57,7 @@
             <div class="row">
                 <div class="col-lg-12" style="margin-top: 5%;">
                     <h1>Badges</h1>
+                    <hr />
                     <p>This is a default badge <span class="badge">2</span></p>
                     <p>This is a primary badge <span class="badge primary">2</span></p>
                     <p>This is a success badge <span class="badge success">2</span></p>
@@ -106,6 +108,13 @@
                     <hr />
                     <button class="button-dark outline" onclick="openModal('myModal');">open modal</button>
                     <button class="button-success outline" onclick="openModal('modalAlert');">open alert modal</button>
+                </div>
+            </div>
+            <div class="row">                
+                <div class="col-md-12" style="margin-top: 5%">
+                    <h1>Modal image preview</h1>
+                    <hr />
+                    <img id="myImg" class="imgToPreview" src="https://www.w3schools.com/howto/img_snow.jpg" alt="Snow" onclick="openImageModal(this, 'imgModal');">
                 </div>
             </div>
             <div class="row">
@@ -250,6 +259,13 @@
         </div>
     </div>
 </div>
-<script src="../javascript/skeleton-styled.min.js"></script>
+
+
+<div id="imgModal" class="modal">    
+    <span class="modal-image-close" onclick="closeModal('imgModal');">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="modalCaption" class="modal-caption"></div>
+</div>
+<script src="../javascript/skeleton-styled.js"></script>
 </body>
 </html>
