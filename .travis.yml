@@ -2,6 +2,11 @@ languaje: node_js
 node_js:
   - "node" #latest stable Node.js release 
 
+stages:
+  - build
+  - name: githubDeploy
+    if: tag IS present
+
 jobs:
   include:
     - stage: build
@@ -9,3 +14,12 @@ jobs:
       script:
         - npm install
         - npm run gulp build
+    - stage: githubDeploy
+      name: "Deploy to Github"
+      provider: releases
+      name: "$TRAVIS_TAG"
+      api_key: "$github_release"
+      file: 
+        - "css/*"
+        - "javascript/*"
+      skip_cleanup: true
