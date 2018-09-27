@@ -18,10 +18,5 @@ jobs:
       provider: npm
       name: "Deploy to npm"
       email: "$npm_email"
-      api_key: "$npm_token"
-      script:
-        - npm config set git-tag-version false
-        - npm version $TRAVIS_TAG
-        - npm version
-      skip_cleanup: true
+      api_key: "$npm_token"      
       
