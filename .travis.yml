@@ -4,7 +4,7 @@ node_js:
 
 stages:
   - build
-  - name: githubDeploy
+  - name: deploy
     if: tag IS present
 
 jobs:
@@ -14,7 +14,8 @@ jobs:
       script:
         - npm install
         - npm run gulp build
-    - stage: githubDeploy
+    - stage: deploy
+      script: skip 
       provider: npm
       name: "Deploy to npm"
       email: "$npm_email"
