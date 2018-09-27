@@ -1,6 +1,6 @@
 languaje: node_js
 node_js:
-  - "node" #latest stable Node.js release 
+  - node #latest stable Node.js release 
 
 stages:
   - build
