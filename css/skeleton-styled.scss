@@ -2041,6 +2041,17 @@ div.content {
         width: 100%;
     }
 }
+.imgToPreview {
+    width:100%;
+    max-width:300px; 
+    border-radius: 7px;
+    cursor: pointer;
+    transition: $transition-time;
+}
+
+.imgToPreview:hover {
+    opacity: 0.7;
+}
 .danger {   
     background-color: $clear-red;
     color: $red;    
