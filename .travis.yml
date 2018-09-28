@@ -9,8 +9,14 @@ cache:
 install:
   - npm install
 
+before_script:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis CI"
+
 script:
   - npm run gulp build
+  - chmod +x postScript.sh
+  - ./postScript.sh   
 
 after_success:
   - chmod +x predeploy.sh
