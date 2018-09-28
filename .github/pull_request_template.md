@@ -3,7 +3,7 @@ Before doing a pull request verify the following folders have the generated code
 -   [ ] css
 -   [ ] javascript
 
-Also verify the `pachage.json` file has the proper version. It can be asked for change the version before merging.
+Also verify the `pachage.json` file has the proper version. It can be asked for changing the version before merging.
 
 Please provide enough information so that others can review your pull request:
 
