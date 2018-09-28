@@ -12,6 +12,9 @@ install:
 script:
   - npm run gulp build
 
+before_deploy:
+  - echo "Before Deploy"
+
 deploy:
   - provider: npm
     name: "$TRAVIS_TAG"
