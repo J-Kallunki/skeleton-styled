@@ -15,8 +15,6 @@ before_script:
 
 script:
   - npm run gulp build
-  - chmod +x postScript.sh
-  - ./postScript.sh   
 
 after_success:
   - chmod +x predeploy.sh
