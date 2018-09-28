@@ -24,8 +24,8 @@ deploy:
     name: "$TRAVIS_TAG"
     api_key: "$github_release"
     file: 
-      - "css/*"
-      - "javascript/*"
+      - css/*
+      - javascript/*
     skip_cleanup: true
     on:
       tags: true
