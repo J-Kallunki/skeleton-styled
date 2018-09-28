@@ -24,8 +24,10 @@ deploy:
     name: "$TRAVIS_TAG"
     api_key: "$github_release"
     file: 
-      - css/*
-      - javascript/*
+      - css/skeleton-styled.min.css
+      - css/skeleton-styled.css
+      - javascript/skeleton-styled.js
+      - javascript/skeleton-styled.min.js
     skip_cleanup: true
     on:
       tags: true
