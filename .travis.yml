@@ -2,21 +2,21 @@ languaje: node_js
 node_js:
   - node #latest stable Node.js release 
 
-stages:
-  - build
-  - name: deploy
-    if: tag IS present
+cache:
+  directories:
+    - "node_modules"
 
-jobs:
-  include:
-    - stage: build
-      name: "Build css"
-      script:
-        - npm install
-        - npm run gulp build
-    - stage: deploy      
-      provider: npm
-      name: "Deploy to npm"
-      email: "$npm_email"
-      api_key: "$npm_token"      
-      
+install:
+  - npm install
+
+script:
+  - npm run gulp build
+
+deploy:
+  - provider: npm
+    name: "$TRAVIS_TAG"
+    email: "$npm_email"
+    api_key: "$npm_token"
+    skip_cleanup: true
+    on:
+      tags: true
