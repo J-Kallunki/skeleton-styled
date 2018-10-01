@@ -12,38 +12,11 @@ const settings = {
     dist: 'css', 
     jsdist: 'javascript',
     styles: [ 
-        'src/normalize.scss',
-
-        // // Skeleton:
-        'src/skeleton/colors.scss',
-        'src/skeleton/sizes.scss',
-        'src/skeleton/base-styles.scss',
-        'src/skeleton/typography.scss',
-        'src/skeleton/buttons.scss',
-        'src/skeleton/forms.scss',
-        'src/skeleton/tables.scss',
-        'src/skeleton/spacing.scss',
-        'src/skeleton/alerts.scss',
-        'src/skeleton/notes.scss',
-        'src/skeleton/checkbox.scss',
-        'src/skeleton/switch.scss',
-        'src/skeleton/progressbar.scss',
-        'src/skeleton/pagination.scss',
-        'src/skeleton/tooltip.scss',
-        'src/skeleton/loader.scss',
-        'src/skeleton/navbar.scss',
-        'src/skeleton/cards.scss',
-        'src/skeleton/jumbotron.scss',
-        'src/skeleton/badges.scss',
-        'src/skeleton/tabs.scss',
-        'src/skeleton/dropdown.scss',
-        'src/skeleton/accordion.scss',
-        'src/skeleton/slideShow.scss',
-        'src/skeleton/modal.scss',
-        'src/skeleton/imgToPreview.scss',
-        'src/skeleton/element-colors.scss', //? keep as last element
-
-        // // Flexbox-Grid:
+        'src/normalize.scss',        
+        'src/colors.scss',
+        'src/sizes.scss',
+        'src/skeleton-styled/*',
+        'src/element-colors.scss',        
         'src/flexbox-grid.scss',
     ],
     jsFiles: [
