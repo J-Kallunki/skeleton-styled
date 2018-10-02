@@ -387,6 +387,83 @@ $padding: 20px; //padding for buttons, alerts, cards, notes
 $big-padding: 35px; //padding for checkbox text
 $margin: 10px; //margin for progressbar, cards, alerts, 
 
+.accordion-container > button {
+
+    cursor: pointer;    
+    width: 100%;
+    text-align: left;
+    outline: none;
+    margin-bottom: 0px;
+    border-radius: 0;
+}
+
+.accordion-container > button:first-child {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+.accordion-container > button:last-of-type {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.accordion-container {
+    border-radius: $border-radius;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height $transition-time $transition-type;
+}
+.alert {
+    padding: $padding; 
+    margin: $margin 0;
+    border-radius: $border-radius; 
+    border-width: $border-width;
+    border-style: solid;        
+    color: $grey;
+    border-color: $clear-grey;
+}
+
+/* The close button */
+.closebtn {    
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.badge {
+    border-radius: 50%;
+    border: $border-width solid;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;    
+}
+
+.badge.danger {   
+    border-color: $red;
+}
+
+.badge.success {        
+    border-color: $green;            
+}
+
+.badge.warning {    
+    border-color: $yellow;           
+}
+
+.badge.primary {    
+    border-color: $blue;        
+}
+
+.badge.dark {
+    border-color: $clear-grey;           
+}
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
@@ -400,72 +477,6 @@ line-height: 1.6;
 font-weight: 400;
 font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #222; }
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1, h2, h3, h4, h5, h6 {
-margin-top: 0;
-margin-bottom: 2rem;
-font-weight: 300; }
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
-
-/* Larger than phablet */
-@media (min-width: 550px) {
-    h1 { font-size: 5.0rem; }
-    h2 { font-size: 4.2rem; }
-    h3 { font-size: 3.6rem; }
-    h4 { font-size: 3.0rem; }
-    h5 { font-size: 2.4rem; }
-    h6 { font-size: 1.5rem; }
-}
-    
-p { margin-top: 0; }
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-color: #1EAEDB; }
-a:hover {
-color: #0FA0CE; }
-
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul {
-    list-style: circle inside; }
-    ol {
-    list-style: decimal inside; }
-    ol, ul {
-    padding-left: 0;
-    margin-top: 0; }
-    ul ul,
-    ul ol,
-    ol ol,
-    ol ul {
-    margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%; }
-    li {
-    margin-bottom: 1rem; 
-}
-
-/* Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-code {
-    padding: .2rem .5rem;
-    margin: 0 .2rem;
-    font-size: 90%;
-    white-space: nowrap;
-    background: #F1F1F1;
-    border: 1px solid #E1E1E1;
-    border-radius: $border-radius; }
-    pre > code {
-    display: block;
-    padding: 1rem 1.5rem;
-    white-space: pre; 
-}
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
@@ -876,6 +887,193 @@ input[type="button"].button-dark.outline:disabled {
   color: $clear-grey;
   background-color: transparent;
   border-color: $clear-grey; }
+.card {
+    border-radius: $border-radius;
+    border: $border-width solid;   
+    padding: $padding; 
+    margin: $margin 0;
+}
+
+.card .body {
+    text-align: right;
+    float: right;
+}
+
+@media (min-width: 300px) {
+    .card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 720px) {
+    .card i.fas{
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1600px) {
+    .card i.fas {
+        font-size: 5em;
+    }
+}
+/* Customize the label (the container) */
+.checkcontainer {
+    display: block;
+    position: relative;
+    padding-left: $big-padding;
+    padding-top: 7px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+  
+/* Hide the browser's default checkbox */
+.checkcontainer input {
+    position: absolute;
+    opacity: 0;
+} 
+/* Create a custom radio button */
+.mark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $clear-grey;
+    border-radius: 50%;
+    transition: background-color $transition-time $transition-type;
+}
+/* Clearer color when the mark is disabled */
+.checkcontainer input:disabled ~ .mark {
+    background-color: $dark-white;    
+}
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input ~ .check {
+    background-color: $mid-grey;
+}
+/* No change when the mark is disabled */
+.checkcontainer:hover input:disabled ~ .check {
+    background-color: $dark-white;
+} 
+/* When the checkbox is checked, add a blue background */
+.checkcontainer input:checked ~ .check {
+    background-color: $blue;
+}
+/* When the checkbos is checked and disabled */
+.checkcontainer input:checked:disabled ~ .check {
+    background-color: $mid-blue;
+}
+  
+/* Create the checkmark/indicator (hidden when not checked) */
+.check:after {
+    content: "";
+    position: absolute;
+    display: none;    
+}
+  
+/* Show the checkmark when checked */
+.checkcontainer input:checked ~ .check:after {
+    display: block;
+}
+  
+/* Style the checkmark/indicator */
+.checkcontainer .check:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid $white;    
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+} 
+  
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input ~ .radio {
+    background-color: $mid-grey;    
+}
+
+/* On mouse-over disabled, no change*/
+.checkcontainer:hover input:disabled ~ .radio {
+    background-color: $dark-white;    
+}
+  
+/* When the radio button is checked, add a blue background */
+.checkcontainer input:checked ~ .radio {
+    background-color: $blue;
+}
+
+/* When the radio button is checked and disabled */
+.checkcontainer input:checked:disabled ~ .radio {
+    background-color: $mid-blue;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+/* Show the indicator (dot/circle) when checked */
+.checkcontainer input:checked ~ .radio:after {
+    display: block;
+}
+  
+/* Style the indicator (dot/circle) */
+.checkcontainer .radio:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+} 
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+content: "";
+display: table;
+clear: both; }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    // float: left;
+    overflow: hidden;
+  }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $dark-grey;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    margin-top: 67px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: $mid-grey;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: $grey;
+    color: $white;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
@@ -1025,447 +1223,108 @@ select:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 black;
 }
-/* Tables
+/* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-table {
-    border-collapse: collapse;
-}
-
-th,
-td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: $border-width solid $dark-white; }
-table.bordered th, table.bordered td {
-    border: $border-width solid $dark-white;
-}
-th:first-child,
-td:first-child {
-    padding-left: 0; }
-th:last-child,
-td:last-child {
-    padding-right: 0; }
-
-tr {
-    -webkit-transition: background-color $transition-time $transition-type;
-    -moz-transition: background-color $transition-time $transition-type;
-    -o-transition: background-color $transition-time $transition-type;
-    transition: background-color $transition-time $transition-type;
-}
-
-table.hover tbody tr:hover {
-    background-color: $clear-grey;    
-}
-
-table.stripped tr:nth-child(even) {
-    background-color: $dark-white;
-}
-
-table.small th, table.small td {
-    padding: 0px 0px;
-}
-
-tr.danger td, 
-tr.success td, 
-tr.warning td, 
-tr.primary td,
-tr.dark td {
-    border-color: inherit;
-}
-
-table.hover tr.danger:hover {
-    background-color: $mid-red;
-}
-
-table.hover tr.success:hover {
-    background-color: $mid-green;
-}
-
-table.hover tr.warning:hover {
-    background-color: $mid-yellow;
-}
-
-table.hover tr.primary:hover {
-    background-color: $mid-blue;
-}
-
-table.hover tr.dark:hover {
-    background-color: $mid-grey;
-}
-
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-button,
-.button {
-margin-bottom: 1rem; }
-input,
-textarea,
-select,
-fieldset {
-margin-bottom: 1.5rem; }
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol,
-form {
-margin-bottom: 2.5rem; }
-
-
-/* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.u-full-width {
-width: 100%;
-box-sizing: border-box; }
-.u-max-full-width {
-max-width: 100%;
-box-sizing: border-box; }
-.u-pull-right {
-float: right; }
-.u-pull-left {
-float: left; }
-
-/* Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-hr {
-    margin-top: 3rem;
-    margin-bottom: 3.5rem;
-    border-width: 0;
-    border-top: $border-width solid #E1E1E1; }
-.alert {
-    padding: $padding; 
-    margin: $margin 0;
-    border-radius: $border-radius; 
-    border-width: $border-width;
-    border-style: solid;        
-    color: $grey;
-    border-color: $clear-grey;
-}
-
-/* The close button */
-.closebtn {    
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-}
-.note {
-    border-radius: $border-radius;
-    border-left: 6px solid;
-    // padding-left: 1%;
-    padding: $padding;
-    color: $grey;
-    margin: $margin 0;
-}
-
-.note.danger {   
-    border-left-color: $red;
-}
-
-.note.success {        
-    border-left-color: $green;            
-}
-
-.note.warning {    
-    border-left-color: $yellow;           
-}
-
-.note.primary {    
-    border-left-color: $blue;        
-}
-
-.note.dark {
-    border-left-color: $clear-grey;           
-}
-/* Customize the label (the container) */
-.checkcontainer {
-    display: block;
+.container {
     position: relative;
-    padding-left: $big-padding;
-    padding-top: 7px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;    
-}
-  
-/* Hide the browser's default checkbox */
-.checkcontainer input {
-    position: absolute;
-    opacity: 0;
-} 
-/* Create a custom radio button */
-.mark {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: $clear-grey;
-    border-radius: 50%;
-    transition: background-color $transition-time $transition-type;
-}
-/* Clearer color when the mark is disabled */
-.checkcontainer input:disabled ~ .mark {
-    background-color: $dark-white;    
-}
-/* On mouse-over, add a grey background color */
-.checkcontainer:hover input ~ .check {
-    background-color: $mid-grey;
-}
-/* No change when the mark is disabled */
-.checkcontainer:hover input:disabled ~ .check {
-    background-color: $dark-white;
-} 
-/* When the checkbox is checked, add a blue background */
-.checkcontainer input:checked ~ .check {
-    background-color: $blue;
-}
-/* When the checkbos is checked and disabled */
-.checkcontainer input:checked:disabled ~ .check {
-    background-color: $mid-blue;
-}
-  
-/* Create the checkmark/indicator (hidden when not checked) */
-.check:after {
-    content: "";
-    position: absolute;
-    display: none;    
-}
-  
-/* Show the checkmark when checked */
-.checkcontainer input:checked ~ .check:after {
-    display: block;
-}
-  
-/* Style the checkmark/indicator */
-.checkcontainer .check:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid $white;    
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-} 
-  
-/* On mouse-over, add a grey background color */
-.checkcontainer:hover input ~ .radio {
-    background-color: $mid-grey;    
-}
-
-/* On mouse-over disabled, no change*/
-.checkcontainer:hover input:disabled ~ .radio {
-    background-color: $dark-white;    
-}
-  
-/* When the radio button is checked, add a blue background */
-.checkcontainer input:checked ~ .radio {
-    background-color: $blue;
-}
-
-/* When the radio button is checked and disabled */
-.checkcontainer input:checked:disabled ~ .radio {
-    background-color: $mid-blue;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.radio:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-  
-/* Show the indicator (dot/circle) when checked */
-.checkcontainer input:checked ~ .radio:after {
-    display: block;
-}
-  
-/* Style the indicator (dot/circle) */
-.checkcontainer .radio:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #fff;
-} 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-}
-  
-  /* Hide default HTML checkbox */
-.switch input {display:none;}
-  
-  /* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $red;
-    -webkit-transition: $transition-time;
-    transition: $transition-time;
-}
-
-input:disabled + .slider {
-    background-color: $mid-red;
-    cursor: default;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 4px;
-    background-color: $white;
-    -webkit-transition: $transition-time;
-    transition: $transition-time;
-}
-  
-input:checked + .slider {
-    background-color: $blue;
-}
-input:checked:disabled + .slider {
-    background-color: $mid-blue;
-}
-  
-input:focus + .slider {
-    box-shadow: 0 0 1px $blue;
-}
-  
-input:checked + .slider:before {
-    -webkit-transform: translateX(24px);
-    -ms-transform: translateX(24px);
-    transform: translateX(24px);
-}
-  
-/* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
-  
-.slider.round:before {
-    border-radius: 50%;
-} 
-.progressBar {
     width: 100%;
-    background-color: $dark-white;
-    margin: $margin 0;
-    border-radius: $border-radius;
-}
-.progress {
-    height: 5px;
-    border-radius: $border-radius;
-}
-.progress.primary {
-    background-color: $blue;
-}
-.progress.success {
-    background-color: $green;
-}
-.progress.warning {
-    background-color: $yellow;
-}
-.progress.danger {
-    background-color: $red;
-}
-.progress.dark {
-    background-color: $grey;
-}
-
-
-
- /* Pagination links */
- .pagination * {
-    color: black;
-    // float: center;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color $transition-time $transition-type;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-/* Style the active/current link */
-.pagination .active {
-    background-color: $blue;
-    color: $white;
-    border-radius: 50%;
-}
-
-/* Add a grey background color on mouse-over */
-.pagination *:hover:not(.active) {
-    background-color: $dark-white;
-    color: $white;
-} 
-
-.dot {
-    cursor: pointer;
-    height: 7px;
-    margin: 0 2px;
-    background-color: $clear-grey;
-    border-radius: 50%;
-    display: inline-block;    
+    max-width: 2880px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;  }
+  .column,
+  .columns {
+    width: 100%;
+    float: left;
+    box-sizing: border-box; }
+  
+  /* For devices larger than 400px */
+  @media (min-width: 400px) {
+    .container {
+      width: 85%;
+      padding: 0; }
   }
- /* Tooltip container */
- .tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: $border-width dotted black; /* If you want dots under the hoverable text */
+  
+  /* For devices larger than 550px */
+  @media (min-width: 550px) {
+    .container {
+      width: 80%; }
+    .column,
+    .columns {
+      margin-left: 4%; }
+    .column:first-child,
+    .columns:first-child {
+      margin-left: 0; }
+  
+    .one.column,
+    .one.columns                    { width: 4.66666666667%; }
+    .two.columns                    { width: 13.3333333333%; }
+    .three.columns                  { width: 22%;            }
+    .four.columns                   { width: 30.6666666667%; }
+    .five.columns                   { width: 39.3333333333%; }
+    .six.columns                    { width: 48%;            }
+    .seven.columns                  { width: 56.6666666667%; }
+    .eight.columns                  { width: 65.3333333333%; }
+    .nine.columns                   { width: 74.0%;          }
+    .ten.columns                    { width: 82.6666666667%; }
+    .eleven.columns                 { width: 91.3333333333%; }
+    .twelve.columns                 { width: 100%; margin-left: 0; }
+  
+    .one-third.column               { width: 30.6666666667%; }
+    .two-thirds.column              { width: 65.3333333333%; }
+  
+    .one-half.column                { width: 48%; }
+  
+    /* Offsets */
+    .offset-by-one.column,
+    .offset-by-one.columns          { margin-left: 8.66666666667%; }
+    .offset-by-two.column,
+    .offset-by-two.columns          { margin-left: 17.3333333333%; }
+    .offset-by-three.column,
+    .offset-by-three.columns        { margin-left: 26%;            }
+    .offset-by-four.column,
+    .offset-by-four.columns         { margin-left: 34.6666666667%; }
+    .offset-by-five.column,
+    .offset-by-five.columns         { margin-left: 43.3333333333%; }
+    .offset-by-six.column,
+    .offset-by-six.columns          { margin-left: 52%;            }
+    .offset-by-seven.column,
+    .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+    .offset-by-eight.column,
+    .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+    .offset-by-nine.column,
+    .offset-by-nine.columns         { margin-left: 78.0%;          }
+    .offset-by-ten.column,
+    .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+    .offset-by-eleven.column,
+    .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+  
+    .offset-by-one-third.column,
+    .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+    .offset-by-two-thirds.column,
+    .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+  
+    .offset-by-one-half.column,
+    .offset-by-one-half.columns     { margin-left: 52%; }
+  
+  }
+.imgToPreview {
+    width:100%;
+    max-width:300px; 
+    border-radius: 7px;
+    cursor: pointer;
+    transition: $transition-time;
 }
 
-/* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: $grey;
-    color: $white;
-    text-align: center;
-    padding: 5px 0;
+.imgToPreview:hover {
+    opacity: 0.7;
+}
+.jumbotron {
+    border: $border-width;
+    border-color: $dark-white;
     border-radius: $border-radius;
-
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-
-    /* Fade in tooltip */
-    opacity: 0;
-    transition: opacity $transition-time $transition-type;
-}
-
-/* Tooltip arrow */
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: $grey transparent transparent transparent;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+    background-color: $dark-white;
+    padding: $padding;
 }
 .loader {
     border: 5px solid $dark-white; 
@@ -1479,6 +1338,162 @@ input:checked + .slider:before {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: $clear-black; /* Fallback color */
+    background-color: $black-opacity; /* Black w/ opacity */
+}
+
+/* The Close Button */
+.close {
+    color: $clear-grey;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: $clear-black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+ 
+/* The Close Button */
+.modal-image-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: $clear-grey;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal-image-close:hover,
+.modal-image-close:focus {
+    color: $white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ /* Modal Header */
+ .modal-header > * {
+    padding: $padding;
+}
+
+/* Modal Body */
+.modal-body {padding: $padding;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: $padding;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: $white;
+    margin: auto;
+    margin-top: 5%;
+    // padding: $padding;
+    border: 1px solid $clear-black;
+    border-radius: 7px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 $black-opacity,0 6px 20px 0 $black-opacity;
+    animation-name: zoom;
+    animation-duration: $transition-time;
+}
+
+// .modal-image-close + .modal-content {
+//     width: auto;
+//     text-align: center;
+// }
+
+#img01 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+} 
+
+/* Modal Content (Image) */
+// .modal-content {
+//     margin: auto;
+//     display: block;
+//     width: 80%;
+//     max-width: 700px;
+// }
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+.modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: $white;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
 }
 .navbar {
     background-color: $dark-grey;
@@ -1645,190 +1660,94 @@ div.content {
 } 
   
   
-.card {
+.note {
     border-radius: $border-radius;
-    border: $border-width solid;   
-    padding: $padding; 
+    border-left: 6px solid;
+    // padding-left: 1%;
+    padding: $padding;
+    color: $grey;
     margin: $margin 0;
 }
 
-.card .body {
-    text-align: right;
-    float: right;
+.note.danger {   
+    border-left-color: $red;
 }
 
-@media (min-width: 300px) {
-    .card {
-        width: 100%;
-    }
+.note.success {        
+    border-left-color: $green;            
 }
 
-@media (min-width: 720px) {
-    .card i.fas{
-        font-size: 3em;
-    }
+.note.warning {    
+    border-left-color: $yellow;           
 }
 
-@media (min-width: 1600px) {
-    .card i.fas {
-        font-size: 5em;
-    }
+.note.primary {    
+    border-left-color: $blue;        
 }
-.jumbotron {
-    border: $border-width;
-    border-color: $dark-white;
-    border-radius: $border-radius;
-    background-color: $dark-white;
-    padding: $padding;
+
+.note.dark {
+    border-left-color: $clear-grey;           
 }
-.badge {
+ /* Pagination links */
+ .pagination * {
+    color: black;
+    // float: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color $transition-time $transition-type;
     border-radius: 50%;
-    border: $border-width solid;
     display: inline-block;
-    padding-left: 8px;
-    padding-right: 8px;
-    text-align: center;    
 }
 
-.badge.danger {   
-    border-color: $red;
-}
-
-.badge.success {        
-    border-color: $green;            
-}
-
-.badge.warning {    
-    border-color: $yellow;           
-}
-
-.badge.primary {    
-    border-color: $blue;        
-}
-
-.badge.dark {
-    border-color: $clear-grey;           
-}
- /* Style the tab */
- .tab {
-    overflow: hidden;
-    //border: $border-width solid $dark-white;
-    background-color: $clear-grey;
-    border-top-right-radius: $border-radius;
-    border-top-left-radius: $border-radius;
-    border-top: $border-width solid $dark-white;
-    border-left: $border-width solid $dark-white;
-    border-right: $border-width solid $dark-white;
-    
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab a {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: $padding;
-    transition: $transition-time;
+/* Style the active/current link */
+.pagination .active {
+    background-color: $blue;
     color: $white;
-    font-size: 17px;
-    text-decoration: none;
+    border-radius: 50%;
 }
 
-.tab a:first-child {
-    border-top-right-radius: $border-radius;
-    border-top-left-radius: 0 !important;
-}
-
-/* Change background color of buttons on hover */
-.tab a:hover {
-    background-color: $grey;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-}
-
-/* Create an active/current tablink class */
-.tab a.active {
-    background-color: $white;    
-    color: $dark-grey;   
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius; 
-}
-
-/* Style the tab content */
-.tabcontent {
-    // display: none;
-    padding: $padding;
-    border: $border-width solid $dark-white;
-    border-top: none;
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
+/* Add a grey background color on mouse-over */
+.pagination *:hover:not(.active) {
+    background-color: $dark-white;
+    color: $white;
 } 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    // float: left;
-    overflow: hidden;
+
+.dot {
+    cursor: pointer;
+    height: 1px;
+    margin: 0 2px;
+    background-color: $clear-grey;
+    border-radius: 50%;
+    display: inline-block;    
   }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: $dark-grey;
-    width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 0;
-    margin-top: 67px;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: $mid-grey;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: $grey;
-    color: $white;
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-.accordion-container > button {
-
-    cursor: pointer;    
+.progressBar {
     width: 100%;
-    text-align: left;
-    outline: none;
-    margin-bottom: 0px;
-    border-radius: 0;
-}
-
-.accordion-container > button:first-child {
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
-}
-
-.accordion-container > button:last-of-type {
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-}
-
-.accordion-container {
+    background-color: $dark-white;
+    margin: $margin 0;
     border-radius: $border-radius;
 }
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height $transition-time $transition-type;
+.progress {
+    height: 5px;
+    border-radius: $border-radius;
 }
+.progress.primary {
+    background-color: $blue;
+}
+.progress.success {
+    background-color: $green;
+}
+.progress.warning {
+    background-color: $yellow;
+}
+.progress.danger {
+    background-color: $red;
+}
+.progress.dark {
+    background-color: $grey;
+}
+
+
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -1909,148 +1828,348 @@ div.content {
   from {opacity: .4}
   to {opacity: 1}
 }
-  /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: $clear-black; /* Fallback color */
-    background-color: $black-opacity; /* Black w/ opacity */
-}
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+button,
+.button {
+margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+margin-bottom: 2.5rem; }
 
-/* The Close Button */
-.close {
-    color: $clear-grey;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-    color: $clear-black;
-    text-decoration: none;
-    cursor: pointer;
-} 
- 
-/* The Close Button */
-.modal-image-close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: $clear-grey;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-full-width {
+width: 100%;
+box-sizing: border-box; }
+.u-max-full-width {
+max-width: 100%;
+box-sizing: border-box; }
+.u-pull-right {
+float: right; }
+.u-pull-left {
+float: left; }
 
-.modal-image-close:hover,
-.modal-image-close:focus {
-    color: $white;
-    text-decoration: none;
-    cursor: pointer;
-}
-
- /* Modal Header */
- .modal-header > * {
-    padding: $padding;
-}
-
-/* Modal Body */
-.modal-body {padding: $padding;}
-
-/* Modal Footer */
-.modal-footer {
-    padding: $padding;
-}
-
-/* Modal Content */
-.modal-content {
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: $border-width solid #E1E1E1; }
+.switch {
     position: relative;
-    background-color: $white;
-    margin: auto;
-    margin-top: 5%;
-    // padding: $padding;
-    border: 1px solid $clear-black;
-    border-radius: 7px;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 $black-opacity,0 6px 20px 0 $black-opacity;
-    animation-name: zoom;
-    animation-duration: $transition-time;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
 }
-
-// .modal-image-close + .modal-content {
-//     width: auto;
-//     text-align: center;
-// }
-
-#img01 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-} 
-
-/* Modal Content (Image) */
-// .modal-content {
-//     margin: auto;
-//     display: block;
-//     width: 80%;
-//     max-width: 700px;
-// }
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-.modal-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: $white;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-.imgToPreview {
-    width:100%;
-    max-width:300px; 
-    border-radius: 7px;
+  
+  /* Hide default HTML checkbox */
+.switch input {display:none;}
+  
+  /* The slider */
+.slider {
+    position: absolute;
     cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $red;
+    -webkit-transition: $transition-time;
     transition: $transition-time;
 }
 
-.imgToPreview:hover {
-    opacity: 0.7;
+input:disabled + .slider {
+    background-color: $mid-red;
+    cursor: default;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $white;
+    -webkit-transition: $transition-time;
+    transition: $transition-time;
+}
+  
+input:checked + .slider {
+    background-color: $blue;
+}
+input:checked:disabled + .slider {
+    background-color: $mid-blue;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px $blue;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+} 
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: $border-width solid $dark-white; }
+table.bordered th, table.bordered td {
+    border: $border-width solid $dark-white;
+}
+th:first-child,
+td:first-child {
+    padding-left: 0; }
+th:last-child,
+td:last-child {
+    padding-right: 0; }
+
+tr {
+    -webkit-transition: background-color $transition-time $transition-type;
+    -moz-transition: background-color $transition-time $transition-type;
+    -o-transition: background-color $transition-time $transition-type;
+    transition: background-color $transition-time $transition-type;
+}
+
+table.hover tbody tr:hover {
+    background-color: $clear-grey;    
+}
+
+table.stripped tr:nth-child(even) {
+    background-color: $dark-white;
+}
+
+table.small th, table.small td {
+    padding: 0px 0px;
+}
+
+tr.danger td, 
+tr.success td, 
+tr.warning td, 
+tr.primary td,
+tr.dark td {
+    border-color: inherit;
+}
+
+table.hover tr.danger:hover {
+    background-color: $mid-red;
+}
+
+table.hover tr.success:hover {
+    background-color: $mid-green;
+}
+
+table.hover tr.warning:hover {
+    background-color: $mid-yellow;
+}
+
+table.hover tr.primary:hover {
+    background-color: $mid-blue;
+}
+
+table.hover tr.dark:hover {
+    background-color: $mid-grey;
+}
+
+ /* Style the tab */
+ .tab {
+    overflow: hidden;
+    //border: $border-width solid $dark-white;
+    background-color: $clear-grey;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    border-top: $border-width solid $dark-white;
+    border-left: $border-width solid $dark-white;
+    border-right: $border-width solid $dark-white;
+    
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: $padding;
+    transition: $transition-time;
+    color: $white;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.tab a:first-child {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: 0 !important;
+}
+
+/* Change background color of buttons on hover */
+.tab a:hover {
+    background-color: $grey;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+/* Create an active/current tablink class */
+.tab a.active {
+    background-color: $white;    
+    color: $dark-grey;   
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius; 
+}
+
+/* Style the tab content */
+.tabcontent {
+    // display: none;
+    padding: $padding;
+    border: $border-width solid $dark-white;
+    border-top: none;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+} 
+ /* Tooltip container */
+ .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: $border-width dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: $grey;
+    color: $white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: $border-radius;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity $transition-time $transition-type;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $grey transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h2, h3, h4, h5, h6 {
+margin-top: 0;
+margin-bottom: 2rem;
+font-weight: 300; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+    h1 { font-size: 5.0rem; }
+    h2 { font-size: 4.2rem; }
+    h3 { font-size: 3.6rem; }
+    h4 { font-size: 3.0rem; }
+    h5 { font-size: 2.4rem; }
+    h6 { font-size: 1.5rem; }
+}
+    
+p { margin-top: 0; }
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+color: #1EAEDB; }
+a:hover {
+color: #0FA0CE; }
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+    list-style: circle inside; }
+    ol {
+    list-style: decimal inside; }
+    ol, ul {
+    padding-left: 0;
+    margin-top: 0; }
+    ul ul,
+    ul ol,
+    ol ol,
+    ol ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%; }
+    li {
+    margin-bottom: 1rem; 
+}
+
+/* Code
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code {
+    padding: .2rem .5rem;
+    margin: 0 .2rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background: #F1F1F1;
+    border: 1px solid #E1E1E1;
+    border-radius: $border-radius; }
+    pre > code {
+    display: block;
+    padding: 1rem 1.5rem;
+    white-space: pre; 
 }
 .danger {   
     background-color: $clear-red;
